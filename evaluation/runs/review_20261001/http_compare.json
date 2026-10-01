@@ -1,0 +1,541 @@
+{
+  "question": "QĐ 721/2024 thay thế văn bản nào?",
+  "mode": "compare",
+  "retrieve_only": true,
+  "results": {
+    "rag": {
+      "question": "QĐ 721/2024 thay thế văn bản nào?",
+      "method": "rag",
+      "answer": null,
+      "citations": [
+        {
+          "article_id": "DA2019-P005-C03",
+          "label": "Quy định đồ án, khóa luận tốt nghiệp, trang 5 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf#page=5"
+        },
+        {
+          "article_id": "QC2023-P001-PREFACE",
+          "label": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023), trang 1",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+        },
+        {
+          "article_id": "KL_SICT-P002-C01",
+          "label": "Quy định đồ án, khóa luận tốt nghiệp đăng trên SICT, trang 2 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=2"
+        },
+        {
+          "article_id": "QC2023-D20-K2-P01",
+          "label": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023), Điều 20, khoản 2, trang 26",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=26"
+        },
+        {
+          "article_id": "HP_SICT-P021-C02",
+          "label": "Danh sách học phần thay thế 2022, trang 21 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf#page=21"
+        }
+      ],
+      "retrieved_article_ids": [
+        "DA2019-P005-C03",
+        "QC2023-P001-PREFACE",
+        "KL_SICT-P002-C01",
+        "QC2023-D20-K2-P01",
+        "HP_SICT-P021-C02"
+      ],
+      "evidence": [
+        {
+          "id": "DA2019-P005-C03",
+          "document_id": "DA2019",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy định đồ án, khóa luận tốt nghiệp",
+          "document_number": "",
+          "issued_date": "2019-02-14",
+          "text": "02 ngày Khoa chuyên môn thu kết quả chấm phản biện và gửi các tài liệu liên quan cho HĐ. - Nội dung chấm theo quy định trong Phụ lục; “r4 AC",
+          "page_start": 5,
+          "page_end": 5,
+          "source_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf",
+          "landing_url": "https://dttc.haui.edu.vn/vn/quy-che-dao-tao/quy-dinh-thuc-hien-do-an-khoa-luan-tot-nghiep-doi-voi-sinh-vien-trinh-do-dai-hoc/49826",
+          "source_sha256": "c11a6d5f10977a8d2a2ef96c438bd8a002312442a1aa24ae459e74da81ada1de",
+          "ocr_sha256": "9c7a3ae3ad898e79d5057f178726e40003a24d8a69e1e62c53429623df66b5a8",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        },
+        {
+          "id": "QC2023-P001-PREFACE",
+          "document_id": "QC2023",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023)",
+          "document_number": "744/QĐ-ĐHCN; 666/QĐ-ĐHCN",
+          "text": "QUY CHẾ ĐÀO TẠO TRÌNH ĐỘ ĐẠI HỌC\n        TẠI TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI\n  (Hợp nhất quy chế đào tạo ban hành theo quyết định 744/QĐ-ĐHCN ngày 19 tháng 08\n năm 2021 và quyết định sửa đổi một số điều của quy chế 744 ban hành theo Quyết định\n                666/QĐ-ĐHCN ngày 01 tháng 06 năm 2023)",
+          "page_start": 1,
+          "page_end": 1,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "40537d705441f559f82047b4b06744105d02106193b226e377984affece8dcc7",
+          "source_char_start": 0,
+          "validity": "unknown"
+        },
+        {
+          "id": "KL_SICT-P002-C01",
+          "document_id": "KL_SICT",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy định đồ án, khóa luận tốt nghiệp đăng trên SICT",
+          "document_number": "1077/QĐ-ĐHCN",
+          "issued_date": "2023-08-30",
+          "text": "QUYÉT ĐỊNH: Điều 1. Ban hành kèm theo Quyết định này Quy định thực hiện đồ án, khóa luận tốt nghiệp trình độ đại học tại Trường Đại học Công nghiệp Hà Nội. Điều 2. Quyết định này có hiệu lực thực hiện từ học kỳ 1 năm học 2023-2024 và thay thế Quyết định số 239/QĐÐ-ĐHCN ngày 03/03/2022 của Hiệu trưởng Trường Đại học Công nghiệp Hà Nội ban hành Quy định thực hiện đồ án, khóa luận tốt nghiệp cho đảo tạo trình độ đại học tại Trường Đại học Công nghiệp Hà Nội. Điều 3. Trưởng các đơn vị, viên chức, người lao động và sinh viên có liên quan chịu trách nhiệm thi hành quyết định này./. Nơi nhận: - Như điều 3; - Lưu: VT, ĐT. k",
+          "page_start": 2,
+          "page_end": 2,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "1267ab27b2a903dc0f9efe76aa42c0072145dd37ef894045bf6328c0c95961a3",
+          "ocr_sha256": "bdc30983dcced42b5e9d5159c058d062573bb186ad7a5f3e69de8bdaf9af3222",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        },
+        {
+          "id": "QC2023-D20-K2-P01",
+          "document_id": "QC2023",
+          "article_id": "D20",
+          "article_number": 20,
+          "clause": "2",
+          "title": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023)",
+          "document_number": "744/QĐ-ĐHCN; 666/QĐ-ĐHCN",
+          "text": "2. Nhà trường thực hiện giải trình theo quy định tại khoản 4 Điều 13 Nghị\nđịnh số 99/2019/NĐ-CP ngày 30 tháng 12 năm 2019 của Chính phủ quy định chi\ntiết và hướng dẫn thi hành một số điều của Luật sửa đổi bổ sung một số điều của\nLuật Giáo dục đại học và các quy định khác của pháp luật có liên quan.",
+          "page_start": 26,
+          "page_end": 26,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "40537d705441f559f82047b4b06744105d02106193b226e377984affece8dcc7",
+          "source_char_start": 59410,
+          "validity": "unknown"
+        },
+        {
+          "id": "HP_SICT-P021-C02",
+          "document_id": "HP_SICT",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Danh sách học phần thay thế 2022",
+          "document_number": "427/QĐ-ĐHCN",
+          "issued_date": "2022-04-27",
+          "text": "[pgitnh 70 |BM6142 BS 05/05/2022 À Quản trị nhân lực) 3\\ R _ cÌ 770 |Trung tâm Việt Nhật JC5012 — |Diều khiển lập trình PLC 5 |IC5165 BS 11/05/2022",
+          "page_start": 21,
+          "page_end": 21,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "0f9df42bc91a1e7f3d30bd1da19d50ced17cb659e3a4cd2ff304fc2493cc6dbe",
+          "ocr_sha256": "a5845fcc1a48480b1f33c3c5820f9d7cd7f31bc6a68c275efcb0b4df5edf6bcd",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        }
+      ],
+      "retrieval_trace": {
+        "method": "vector_cosine",
+        "top_k": 5,
+        "candidates": [
+          {
+            "id": "DA2019-P005-C03",
+            "score": 0.552
+          },
+          {
+            "id": "QC2023-P001-PREFACE",
+            "score": 0.528
+          },
+          {
+            "id": "KL_SICT-P002-C01",
+            "score": 0.4784
+          },
+          {
+            "id": "QC2023-D20-K2-P01",
+            "score": 0.4646
+          },
+          {
+            "id": "HP_SICT-P021-C02",
+            "score": 0.4494
+          }
+        ]
+      },
+      "latency_ms": 38.89,
+      "api_calls": 0,
+      "token_usage": null,
+      "error": null,
+      "provider": "retrieve_only",
+      "model": null
+    },
+    "graph_rag": {
+      "question": "QĐ 721/2024 thay thế văn bản nào?",
+      "method": "graph_rag",
+      "answer": null,
+      "citations": [
+        {
+          "article_id": "QD721_2024-P001-C02",
+          "label": "Quy định đánh giá kết quả học tập QĐ 721/2024, trang 1 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1"
+        },
+        {
+          "article_id": "QC2023-P001-PREFACE",
+          "label": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023), trang 1",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+        },
+        {
+          "article_id": "KL_SICT-P002-C01",
+          "label": "Quy định đồ án, khóa luận tốt nghiệp đăng trên SICT, trang 2 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=2"
+        },
+        {
+          "article_id": "DA2019-P005-C03",
+          "label": "Quy định đồ án, khóa luận tốt nghiệp, trang 5 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf#page=5"
+        },
+        {
+          "article_id": "HP_SICT-P001-C02",
+          "label": "Danh sách học phần thay thế 2022, trang 1 (OCR chưa hiệu đính toàn bộ)",
+          "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf#page=1"
+        }
+      ],
+      "retrieved_article_ids": [
+        "QD721_2024-P001-C02",
+        "QC2023-P001-PREFACE",
+        "KL_SICT-P002-C01",
+        "DA2019-P005-C03",
+        "HP_SICT-P001-C02"
+      ],
+      "evidence": [
+        {
+          "id": "QD721_2024-P001-C02",
+          "document_id": "QD721_2024",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy định đánh giá kết quả học tập QĐ 721/2024",
+          "document_number": "721/QĐ-ĐHCN",
+          "issued_date": "2024-06-03",
+          "text": "độ thạc sĩ tại Trường Đại học Công nghiệp Hà Nội; Căn cứ Quyết định số 242/QĐ-ĐHCN ngày 02 tháng 03 năm 2023 của Hiệu trưởng nhà trường về việc ban hành Quy chế đào tạo trình độ cao đẳng tại Trường Đại học Công nghiệp Hà Nội; Căn cứ Quyết định số 5 19/QĐÐ-ĐHCN ngày 26 tháng 04 năm 2024 của Hiệu trưởng nhà trường về việc ban hành Quy định đào tạo từ xa trình độ đại học tại Trường Đại học Công nghiệp Hà Nội; Xét đề nghị của Giám đốc Trung tâm Khảo thí. QUYÉT ĐỊNH: Điều 1. Ban hành kèm theo Quyết định này “Quy định tổ chức đánh giá kết quả học tập của người học tại Trường Đại học Công nghiệp Hà Nội”. Điều 2. Quyết định này có hiệu lực từ ngày ký ban hành và thay thế Quyết định số 254/QĐ-ĐHCN ngày 06/3/2023 của Hiệu trưởng nhà trường ban hành Quy định về tổ chức hoạt động đánh giá kết quả học tập của sinh viên Trường Đại học Công nghiệp Hà Nội và Quyết định số 1432/QĐ- -ĐHCN ngày 06/11/2023 của Hiệu trưởng nhà trường ban hành sửa đổi, bễ sung một số điều của Quy định về _——",
+          "page_start": 1,
+          "page_end": 1,
+          "source_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf",
+          "landing_url": "https://tac.haui.edu.vn/vn/quy-dinh",
+          "source_sha256": "24a2f622156c420a49aa16a862c2611fd0c44429aef15cf059c1a80a69a6af99",
+          "ocr_sha256": "4f4120b5719578f1faa3e18f4a3548c7e5f99519e6771cd7ccc198580d1e74c0",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        },
+        {
+          "id": "QC2023-P001-PREFACE",
+          "document_id": "QC2023",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023)",
+          "document_number": "744/QĐ-ĐHCN; 666/QĐ-ĐHCN",
+          "text": "QUY CHẾ ĐÀO TẠO TRÌNH ĐỘ ĐẠI HỌC\n        TẠI TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI\n  (Hợp nhất quy chế đào tạo ban hành theo quyết định 744/QĐ-ĐHCN ngày 19 tháng 08\n năm 2021 và quyết định sửa đổi một số điều của quy chế 744 ban hành theo Quyết định\n                666/QĐ-ĐHCN ngày 01 tháng 06 năm 2023)",
+          "page_start": 1,
+          "page_end": 1,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "40537d705441f559f82047b4b06744105d02106193b226e377984affece8dcc7",
+          "source_char_start": 0,
+          "validity": "unknown"
+        },
+        {
+          "id": "KL_SICT-P002-C01",
+          "document_id": "KL_SICT",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy định đồ án, khóa luận tốt nghiệp đăng trên SICT",
+          "document_number": "1077/QĐ-ĐHCN",
+          "issued_date": "2023-08-30",
+          "text": "QUYÉT ĐỊNH: Điều 1. Ban hành kèm theo Quyết định này Quy định thực hiện đồ án, khóa luận tốt nghiệp trình độ đại học tại Trường Đại học Công nghiệp Hà Nội. Điều 2. Quyết định này có hiệu lực thực hiện từ học kỳ 1 năm học 2023-2024 và thay thế Quyết định số 239/QĐÐ-ĐHCN ngày 03/03/2022 của Hiệu trưởng Trường Đại học Công nghiệp Hà Nội ban hành Quy định thực hiện đồ án, khóa luận tốt nghiệp cho đảo tạo trình độ đại học tại Trường Đại học Công nghiệp Hà Nội. Điều 3. Trưởng các đơn vị, viên chức, người lao động và sinh viên có liên quan chịu trách nhiệm thi hành quyết định này./. Nơi nhận: - Như điều 3; - Lưu: VT, ĐT. k",
+          "page_start": 2,
+          "page_end": 2,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "1267ab27b2a903dc0f9efe76aa42c0072145dd37ef894045bf6328c0c95961a3",
+          "ocr_sha256": "bdc30983dcced42b5e9d5159c058d062573bb186ad7a5f3e69de8bdaf9af3222",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        },
+        {
+          "id": "DA2019-P005-C03",
+          "document_id": "DA2019",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Quy định đồ án, khóa luận tốt nghiệp",
+          "document_number": "",
+          "issued_date": "2019-02-14",
+          "text": "02 ngày Khoa chuyên môn thu kết quả chấm phản biện và gửi các tài liệu liên quan cho HĐ. - Nội dung chấm theo quy định trong Phụ lục; “r4 AC",
+          "page_start": 5,
+          "page_end": 5,
+          "source_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf",
+          "landing_url": "https://dttc.haui.edu.vn/vn/quy-che-dao-tao/quy-dinh-thuc-hien-do-an-khoa-luan-tot-nghiep-doi-voi-sinh-vien-trinh-do-dai-hoc/49826",
+          "source_sha256": "c11a6d5f10977a8d2a2ef96c438bd8a002312442a1aa24ae459e74da81ada1de",
+          "ocr_sha256": "9c7a3ae3ad898e79d5057f178726e40003a24d8a69e1e62c53429623df66b5a8",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        },
+        {
+          "id": "HP_SICT-P001-C02",
+          "document_id": "HP_SICT",
+          "article_id": null,
+          "article_number": null,
+          "clause": null,
+          "title": "Danh sách học phần thay thế 2022",
+          "document_number": "427/QĐ-ĐHCN",
+          "issued_date": "2022-04-27",
+          "text": "chương trình đảo tạo trình độ Đại học, Cao đẳng của trường Đại học Công nghiệp Hà Nội. Điều 2. Danh sách bổ sung các học phần/môn học thay thế tại Điều 1 này được bổ sung thêm vào danh sách kèm theo Quyết định số 454/QĐÐ-ĐHCN ngày 10 tháng 05 năm 2019, để sử dụng trong quá trình tổ chức, quản lý đào tạo của Nhà trường. Điều 3. Các Ông(Bà) Trưởng phòng, Trưởng đơn vị quản lý đào tạo, giảng viên và sinh viên có liên quan chịu trách nhiệm thi hành quyết định này kê từ ngày SẺ VP Nơi nhận: ⁄ ÊU TRƯỞNG - Như Điều 3 HÀ NỘI _Ợ - Lưu: VT, ĐT. han Văn Bỗng",
+          "page_start": 1,
+          "page_end": 1,
+          "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf",
+          "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+          "source_sha256": "0f9df42bc91a1e7f3d30bd1da19d50ced17cb659e3a4cd2ff304fc2493cc6dbe",
+          "ocr_sha256": "a5845fcc1a48480b1f33c3c5820f9d7cd7f31bc6a68c275efcb0b4df5edf6bcd",
+          "extraction_method": "user_supplied_ocr",
+          "ocr_review_status": "page_matched_unreviewed",
+          "validity": "unknown"
+        }
+      ],
+      "retrieval_trace": {
+        "method": "graph_legal_hybrid",
+        "top_k": 5,
+        "seed_ids": [
+          "DA2019-P002-C01",
+          "KL_SICT-P009-C02",
+          "QD721_2024-P035-C01",
+          "DA2019-P005-C03",
+          "QC2023-P001-PREFACE"
+        ],
+        "matched_topics": [],
+        "matched_documents": [
+          "Document:QD721_2024"
+        ],
+        "relation_evidence_ids": [
+          "QD721_2024-P001-C02"
+        ],
+        "related_documents": [
+          "DA2019",
+          "HP_SICT",
+          "KL_SICT",
+          "QC2023",
+          "QD663_2019",
+          "QD721_2024",
+          "TT08_2021"
+        ],
+        "traversed_edges": [
+          {
+            "from": "Document:DA2019",
+            "to": "Document:QD787_2018",
+            "relation": "CITES",
+            "evidence_article_ids": [
+              "DA2019-P001-C01"
+            ],
+            "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf#page=1"
+          },
+          {
+            "from": "Document:QC2023",
+            "to": "Document:QD787_2018",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "QC2023-D22-K2-P01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+          },
+          {
+            "from": "Document:QD663_2019",
+            "to": "Document:QD787_2018",
+            "relation": "AMENDS",
+            "evidence_article_ids": [
+              "QD663_2019-P001-C02"
+            ],
+            "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2712.pdf#page=1"
+          },
+          {
+            "from": "Document:KL_SICT",
+            "to": "Document:QD239_2022",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "KL_SICT-P002-C01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=2"
+          },
+          {
+            "from": "Document:KL_SICT",
+            "to": "Document:TT08_2021",
+            "relation": "CITES",
+            "evidence_article_ids": [
+              "KL_SICT-P001-C01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1"
+          },
+          {
+            "from": "Document:KL_SICT",
+            "to": "Document:QD744_2021",
+            "relation": "CITES",
+            "evidence_article_ids": [
+              "KL_SICT-P001-C01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1"
+          },
+          {
+            "from": "Document:KL_SICT",
+            "to": "Document:QD666_2023",
+            "relation": "CITES",
+            "evidence_article_ids": [
+              "KL_SICT-P001-C01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1"
+          },
+          {
+            "from": "Document:QC2023",
+            "to": "Document:QD666_2023",
+            "relation": "CONSOLIDATES",
+            "evidence_article_ids": [
+              "QC2023-P001-PREFACE"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+          },
+          {
+            "from": "Document:QD666_2023",
+            "to": "Document:QD744_2021",
+            "relation": "AMENDS",
+            "evidence_article_ids": [
+              "QC2023-P001-PREFACE"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+          },
+          {
+            "from": "Document:QC2023",
+            "to": "Document:QD744_2021",
+            "relation": "CONSOLIDATES",
+            "evidence_article_ids": [
+              "QC2023-P001-PREFACE"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+          },
+          {
+            "from": "Document:HP_SICT",
+            "to": "Document:QD744_2021",
+            "relation": "CITES",
+            "evidence_article_ids": [
+              "HP_SICT-P001-C01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf#page=1"
+          },
+          {
+            "from": "Document:QD721_2024",
+            "to": "Document:QD744_2021",
+            "relation": "CITES",
+            "evidence_article_ids": [
+              "QD721_2024-P001-C01"
+            ],
+            "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1"
+          },
+          {
+            "from": "Document:TT08_2021",
+            "to": "Document:QD25_2006",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "TT08_2021-P001-C02"
+            ],
+            "evidence_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf#page=1"
+          },
+          {
+            "from": "Document:TT08_2021",
+            "to": "Document:QD43_2007",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "TT08_2021-P001-C02"
+            ],
+            "evidence_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf#page=1"
+          },
+          {
+            "from": "Document:QD721_2024",
+            "to": "Document:QD254_2023",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "QD721_2024-P001-C02"
+            ],
+            "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1"
+          },
+          {
+            "from": "Document:QD721_2024",
+            "to": "Document:QD1432_2023",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "QD721_2024-P001-C02"
+            ],
+            "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1"
+          },
+          {
+            "from": "Document:QC2023",
+            "to": "Document:QD1017_2016",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "QC2023-D22-K2-P01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+          },
+          {
+            "from": "Document:QC2023",
+            "to": "Document:QD479_2018",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "QC2023-D22-K2-P01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+          },
+          {
+            "from": "Document:QC2023",
+            "to": "Document:QD663_2019",
+            "relation": "REPLACES",
+            "evidence_article_ids": [
+              "QC2023-D22-K2-P01"
+            ],
+            "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+          }
+        ],
+        "candidate_count": 33,
+        "candidates": [
+          {
+            "id": "QD721_2024-P001-C02",
+            "score": 0.8893
+          },
+          {
+            "id": "QC2023-P001-PREFACE",
+            "score": 0.2759
+          },
+          {
+            "id": "KL_SICT-P002-C01",
+            "score": 0.2727
+          },
+          {
+            "id": "DA2019-P005-C03",
+            "score": 0.2644
+          },
+          {
+            "id": "HP_SICT-P001-C02",
+            "score": 0.2441
+          }
+        ]
+      },
+      "latency_ms": 16.3,
+      "api_calls": 0,
+      "token_usage": null,
+      "error": null,
+      "provider": "retrieve_only",
+      "model": null
+    }
+  }
+}

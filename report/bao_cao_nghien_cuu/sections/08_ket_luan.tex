@@ -1,0 +1,15 @@
+\section{Kết luận và hướng phát triển}
+Nghiên cứu so sánh hai pipeline trên cùng corpus HaUI, có đối chứng hybrid và trace. Lỗi kỹ thuật được sửa trước đo, lỗi nội dung được giữ để phân tích.
+
+GraphRAG có Recall@5 cao hơn trên từng bộ, nhưng All-gold bộ 30 là 16/25 so với 17/25 của RAG. Hybrid cho thấy đóng góp từ vựng; chưa cô lập hiệu ứng đồ thị.
+
+Lợi ích tập trung ở phiên bản/quan hệ; RAG tốt hơn ở S07/M01. Câu nhiều điều là điểm yếu chung. Cần chọn phương pháp theo yêu cầu chứng cứ.
+
+Điểm sơ bộ đúng là 8/16 và 11/16, đủ ý là 4/16 và 8/16; cả hai từ chối phù hợp 4/4. Citation có thật chưa ngăn sai phạm vi. Kiểm định cặp chưa cho bằng chứng đủ mạnh về ưu thế chung.
+
+GraphRAG tăng khoảng 9,8\% token và 6,8\% độ trễ trung bình; RAG ít token hơn cùng với nhiều từ chối sai. Không suy ra hiệu năng tải lớn.
+
+\subsection{Ưu tiên phát triển}
+Ưu tiên là hiệu đính OCR, thống nhất gold, kiểm soát phạm vi bằng metadata và soạn tập độc lập có chấm mù. Ablation nhỏ cần tách cạnh với điểm thưởng. Các cải tiến phải được đo trên snapshot mới và giữ lịch sử cũ.
+
+Kết luận giới hạn ở bộ nội bộ và lần đo 01/10/2026. GraphRAG có triển vọng cho quan hệ/phiên bản; độ đầy đủ và phạm vi vẫn cần cải thiện ở cả hai.

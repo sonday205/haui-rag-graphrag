@@ -1,0 +1,20 @@
+{
+  "questions_file": "questions.jsonl",
+  "questions_sha256": "78336212d6575ae38a53e6bd99ca3d96d9d6042d674cf9d640bd63fd61d93756",
+  "code_sha256": "c22b75ec5bb7793d6c4d3e45b8b0116d3789f1cf8ba624d59350cdaa57e31c46",
+  "corpus_sha256": "1fd76e7a87ef87ccd57089439d1d0507bad83d97a48cae2e2796a8b047d28ad6",
+  "vectors_sha256": "795e0997da814e77dc55f4868bd7487005b1d96452058707bf801dfd3ba23282",
+  "graph_sha256": "680f89ae3d9ee1dce93bf3e62792e3f28582f718680f1cd85ee5eba714b0f5f1",
+  "config": {
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "gemini_model": "gemini-3.5-flash-lite",
+    "top_k": 5,
+    "max_evidence_chars": 6500,
+    "generation_temperature": 0
+  },
+  "selected_question_ids": [
+    "S02"
+  ],
+  "started_utc": "2026-10-01T07:35:39.373453+00:00"
+}

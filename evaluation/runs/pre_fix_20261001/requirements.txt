@@ -1,0 +1,12 @@
+beautifulsoup4
+PyMuPDF
+numpy
+scikit-learn
+networkx
+torch
+transformers
+google-genai
+requests
+python-dotenv
+fastapi
+uvicorn

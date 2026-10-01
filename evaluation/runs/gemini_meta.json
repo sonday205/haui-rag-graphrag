@@ -1,0 +1,49 @@
+{
+  "questions_sha256": "78336212d6575ae38a53e6bd99ca3d96d9d6042d674cf9d640bd63fd61d93756",
+  "code_sha256": "7ae3013b65bb05d69a344cc67443d010b1f3177b8f0ccd4cef833939dc7534ed",
+  "config": {
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "gemini_model": "gemini-3.5-flash-lite",
+    "top_k": 5,
+    "max_evidence_chars": 6500,
+    "generation_temperature": 0
+  },
+  "selected_question_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "U01",
+    "U02",
+    "U03",
+    "U04",
+    "U05"
+  ],
+  "started_utc": "2026-09-28T11:00:53.719721+00:00",
+  "resumed_code_sha256": [
+    "05ef8ce75138ad77cb5d90544f160a777b1b1f48dad338aaaf3d4ccd146164b3",
+    "a0688b8beac54df998be97c99aa88b79b9793b4b261f1c2b043bf94ab60f541b"
+  ]
+}

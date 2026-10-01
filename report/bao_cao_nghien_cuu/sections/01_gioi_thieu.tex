@@ -1,0 +1,20 @@
+\section{Giới thiệu và mục tiêu nghiên cứu}
+\subsection{Bài toán}
+Quy định đào tạo phân tán giữa quy chế chung, đánh giá, khóa luận, chuẩn đầu ra và quyết định sửa đổi. Người tra cứu cần đúng nội dung, đối tượng và phiên bản. Tìm một đoạn gần nghĩa có thể bỏ qua điều kiện ở khoản khác hoặc nhầm cách quy đổi điểm với khoảng điểm.
+
+Citation giúp mở lại trang gốc, nhưng ID có thật chưa bảo đảm phát biểu được hỗ trợ. Bài toán gồm truy xuất, sinh nội dung và từ chối khi corpus thiếu thông tin. Đối tượng nghiên cứu là nguyên mẫu trên tài liệu HaUI đã thu thập, ở quy mô dự án cá nhân cấp trường.
+
+\subsection{Câu hỏi nghiên cứu}
+\begin{enumerate}
+\item Khi giữ chung corpus và số đoạn đầu ra, GraphRAG thay đổi khả năng tìm chứng cứ như thế nào so với RAG vector và hybrid không đồ thị?
+\item Lợi ích quan sát được tập trung ở câu hỏi một điều, nhiều điều, phiên bản hay quan hệ văn bản?
+\item Chất lượng đáp án có đi cùng Recall@5 hay còn bị chi phối bởi phạm vi, điều kiện và cách mô hình sinh sử dụng chứng cứ?
+\item Độ trễ và lượng token thay đổi ra sao trong phép thử nhỏ, và dữ liệu hiện có cho phép kết luận đến đâu?
+\end{enumerate}
+
+\subsection{Phạm vi và đóng góp}
+Phạm vi gồm 9 PDF chính thức của HaUI; hiệu lực hiện hành chưa xác minh. Hệ thống không có hồ sơ cá nhân hay lịch thi riêng. Đề tài không đánh giá tải lớn, huấn luyện lại LLM hoặc tái hiện toàn bộ GraphRAG của Microsoft.
+
+Đóng góp gồm pipeline truy vết đến trang nguồn, đồ thị có chứng cứ, so sánh ghép cặp với cấu hình chung và hồ sơ phân biệt lỗi phần mềm với lỗi đáp án. Các lỗi kỹ thuật được sửa trước đo; lỗi nội dung sau đó được giữ để phân tích, không điều chỉnh gold theo đáp án.
+
+Báo cáo dùng artifact ngày 01/10/2026, không trộn số liệu trước OCR hoặc trước sửa lỗi. Kết quả là thăm dò trên bộ nội bộ, làm cơ sở cho đánh giá độc lập tiếp theo.

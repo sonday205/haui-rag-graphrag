@@ -1,0 +1,21 @@
+\section{Cơ sở lý thuyết và hướng tiếp cận}
+\subsection{RAG và biểu diễn ngữ nghĩa}
+Lewis và cộng sự đề xuất kết hợp bộ nhớ tham số của mô hình sinh với nguồn tri thức ngoài được truy xuất \cite{lewis}. Trong ứng dụng này, RAG được hiện thực theo chuỗi: mã hóa câu hỏi, chọn đoạn liên quan, đưa đoạn vào prompt và sinh câu trả lời có dẫn nguồn. Đây là cách triển khai ứng dụng theo ý tưởng truy xuất tăng cường, không phải tái huấn luyện mô hình RAG gốc của bài báo.
+
+Biểu diễn vector giúp so sánh câu hỏi với đoạn văn ngay cả khi cách diễn đạt khác nhau. Sentence-BERT nghiên cứu biểu diễn câu và so sánh bằng độ tương đồng \cite{sbert}; nghiên cứu mở rộng đa ngôn ngữ cung cấp cơ sở cho việc dùng embedding trên nhiều ngôn ngữ \cite{multilingual}. Dự án dùng MiniLM đa ngôn ngữ 384 chiều, cố định revision. Với vector đã chuẩn hóa, cosine giữa câu hỏi $q$ và đoạn $d$ là:
+\begin{equation}
+ s_v(q,d)=\frac{\mathbf e_q^\top\mathbf e_d}{\|\mathbf e_q\|\|\mathbf e_d\|}.
+\end{equation}
+Vector gần nhau không đồng nghĩa với đúng phiên bản pháp lý. Cụm ``điểm A'' có thể dẫn tới khoảng điểm trên thang 10 hoặc giá trị quy đổi trên thang 4. Đặc điểm này tạo động lực bổ sung metadata, quan hệ và đánh giá phạm vi.
+
+\subsection{Từ vựng và đồ thị}
+TF-IDF theo ký tự giữ tín hiệu số hiệu, tên văn bản và cụm từ ngắn. Đối chứng hybrid của dự án sử dụng n-gram ký tự từ 2 đến 4; điểm chung là:
+\begin{equation}
+ s_h(q,d)=0{,}55\,s_t(q,d)+0{,}45\,s_v(q,d),
+\end{equation}
+trong đó $s_t$ là cosine TF-IDF. Trọng số là cấu hình của nguyên mẫu, chưa được chọn qua tập phát triển độc lập. Báo cáo không xem đây là trọng số tối ưu.
+
+Edge và cộng sự nghiên cứu GraphRAG dùng đồ thị thực thể và tóm tắt cộng đồng cho câu hỏi tổng quát trên corpus \cite{edge}. Đề tài hiện tại dùng đồ thị cấu trúc và quan hệ văn bản có chứng cứ; không dùng tóm tắt cộng đồng. Vì vậy, tên GraphRAG trong các bảng chỉ phương pháp tùy biến của dự án. Ý tưởng chung là dùng quan hệ để mở rộng chứng cứ, còn thuật toán và tác vụ đánh giá khác công trình tham khảo.
+
+\subsection{Tách các tầng chất lượng}
+Chất lượng truy xuất trả lời câu hỏi ``đã lấy được những đoạn cần thiết chưa?''. Chất lượng sinh trả lời ``đã sử dụng chúng đúng và đủ chưa?''. Chất lượng dẫn nguồn còn đòi hỏi phát biểu thực tế được hỗ trợ và đúng phạm vi. Từ chối chỉ là hành vi tốt khi câu hỏi thực sự không trả lời được từ corpus; từ chối trên câu có chứng cứ là một lỗi. Việc tách các tầng này giúp giải thích vì sao Recall cao chưa bảo đảm đáp án đầy đủ.

@@ -1,0 +1,6 @@
+{
+  "evaluation/runs/research_20261001/retrieval_summary.csv": "6d07d148ecaf72e78101c1a0c96ebddbcb9b82b060dc402923bb08867568b106",
+  "evaluation/runs/research_20261001/answer_scores.json": "f658eaa649c4348cf41788376b9647131bc05b3e3b38a2df6afecbbdf5a73e21",
+  "evaluation/runs/research_20261001/generation_revalidated.json": "9784f4b451feaa0be9d9e023462a7c178f144c98f3a38b60168da5cbddce240e",
+  "evaluation/questions_research_20261001.jsonl": "e93f078911b237baf618f86f97092dbe40ad8df204b03a5b83ca81085009ba2a"
+}

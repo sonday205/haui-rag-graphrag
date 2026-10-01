@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-10-01T08:07:47.014049+00:00",
+  "parse_ms": 507.55,
+  "vector_index_ms": 28263.34,
+  "graph_index_ms": 32.9,
+  "total_ms": 28803.79,
+  "embedding_config": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "pooling": "normalized_window_mean_v1",
+    "window_tokens": 256,
+    "stride_tokens": 64
+  },
+  "runtime_versions": {
+    "torch": "2.6.0",
+    "transformers": "5.12.1",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "networkx": "3.4.2",
+    "google-genai": "2.10.0",
+    "PyMuPDF": "1.28.0"
+  },
+  "code_sha256": "4f4266c5e68d2efcc8df595901613283c212a063a9de7b6407dfea6688a08da2",
+  "embedding_coverage": {
+    "chunks": 449,
+    "multi_window_chunks": 160,
+    "max_input_tokens": 458,
+    "silent_truncation": false
+  },
+  "artifact_sha256": {
+    "articles.jsonl": "38256dc6adcf877c83be9b1f259d2494840e975bdad6b919c0f01c56768f0358",
+    "vectors.npy": "02ecbc2c677090721cb3df672a6261e30ce2edb8ba76fcb57c35eda447d98dc3",
+    "graph.json": "5f62f217c35f26a87a78569d44d1599b48a76b21d8d349a3fedee8c9449e1dcc",
+    "legal_relations.json": "739ff787135646bfb779704e8b2a1ede7e1c5b5c1d174288e629fb0a1debe0c7"
+  }
+}

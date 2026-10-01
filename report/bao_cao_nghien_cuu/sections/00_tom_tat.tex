@@ -1,0 +1,13 @@
+\section*{TÓM TẮT}
+\addcontentsline{toc}{section}{Tóm tắt}
+Đề tài so sánh RAG truyền thống dùng truy xuất vector với GraphRAG tùy biến kết hợp ngữ nghĩa, từ vựng và quan hệ văn bản trong hỏi đáp quy chế đào tạo HaUI. Một đối chứng hybrid không đồ thị được bổ sung ở tầng truy xuất. Mục tiêu là tìm đúng chứng cứ, trả lời đúng phạm vi và phân tích lỗi theo loại câu hỏi.
+
+Tập dữ liệu gồm 9 PDF từ các trang chính thức của HaUI, được lập thành 449 đoạn; 313 đoạn lấy từ bản OCR và 136 đoạn lấy từ PDF có lớp chữ. Đồ thị có 480 nút, 1.872 cạnh, trong đó 22 quan hệ pháp lý có câu dẫn được đối chiếu với trang và đoạn chỉ mục. Phép thử ngày 01/10/2026 gồm 174 lượt truy xuất trên ba bộ nội bộ có chồng lấp và 40 yêu cầu Gemini cho 20 cặp câu hỏi. Hai hệ thống sinh sử dụng cùng model \code{gemini-3.5-flash-lite}, prompt, giới hạn chứng cứ và cấu hình đầu ra.
+
+Ở bộ 30 câu ban đầu, Recall@5 của RAG và GraphRAG lần lượt là 0,74 và 0,78; số câu tìm đủ chứng cứ là 17/25 và 16/25. Trên bộ 8 câu quan hệ, Recall@5 tăng từ 0,25 của RAG lên 0,625 của hybrid và 1,00 của GraphRAG. Với 16 câu có đáp án trong bộ sinh, số câu đúng ý chính là 8 và 11; số câu đủ ý là 4 và 8. Cả hai từ chối phù hợp 4 câu ngoài corpus. Điểm nội dung là đánh giá sơ bộ bằng trợ lý AI, chưa được chấm độc lập bởi con người.
+
+Phân tích trường hợp cho thấy GraphRAG hữu ích khi câu hỏi yêu cầu quan hệ sửa đổi, thay thế hoặc xác định phiên bản. Tuy nhiên, hệ thống vẫn chọn sai phạm vi ở một câu về thang điểm; cả hai bỏ lỡ điều kiện ở câu hỏi nhiều điều. Kiểm định cặp thăm dò cho $p=0{,}4531$, chưa cung cấp bằng chứng đủ mạnh về ưu thế chung. Kết quả phục vụ phân tích nguyên nhân và thiết kế đánh giá tiếp theo, không khẳng định hiệu lực hiện hành của toàn bộ corpus hoặc khả năng tổng quát trên dữ liệu độc lập.
+
+\noindent\textbf{Từ khóa:} RAG; GraphRAG; hỏi đáp có dẫn nguồn; quy chế đào tạo; OCR; đánh giá truy xuất.
+
+\noindent\textbf{Thuật ngữ:} corpus là tập chứng cứ; gold là đáp án/ID tham chiếu; chunk là đoạn chỉ mục; trace là dấu vết truy xuất; OCR là nhận dạng chữ từ ảnh; RPM là số yêu cầu API mỗi phút.

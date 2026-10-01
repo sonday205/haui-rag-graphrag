@@ -1,0 +1,46 @@
+\section{Thiết kế và kiểm chứng hệ thống}
+\subsection{Luồng xử lý chung}
+Hai phương pháp dùng chung corpus, encoder và bộ sinh. Khác biệt chính nằm ở cách tạo và xếp hạng tập chứng cứ. API FastAPI phục vụ giao diện React và trả cả đáp án, nguồn, trace, token và thời gian. Chế độ chỉ truy xuất cho phép kiểm tra đoạn được chọn mà không gọi Gemini. Cách tách này giúp nghiên cứu lỗi từng tầng mà không tiêu tốn thêm quota khi chỉ cần đánh giá tìm kiếm.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[>=Latex, node distance=.7cm, every node/.style={font=\small}, box/.style={draw,rounded corners,align=center,minimum height=.85cm,text width=3cm}]
+\node[box] (data) {PDF/OCR + manifest\\449 đoạn có ID};
+\node[box,right=.8cm of data] (index) {Vector 384 chiều\\Đồ thị có chứng cứ};
+\node[box,right=.8cm of index] (search) {RAG / hybrid\\GraphRAG, top 5};
+\node[box,below=1cm of search] (context) {Chứng cứ tối đa\\6.500 ký tự};
+\node[box,left=.8cm of context] (gen) {Gemini chung\\JSON có cấu trúc};
+\node[box,left=.8cm of gen] (out) {Kiểm tra citation\\Đáp án + nguồn + log};
+\draw[->] (data)--(index); \draw[->] (index)--(search);
+\draw[->] (search)--(context); \draw[->] (context)--(gen); \draw[->] (gen)--(out);
+\end{tikzpicture}
+\caption{Luồng nguyên mẫu dùng cho thực nghiệm, với đầu ra truy vết.}
+\end{figure}
+
+\subsection{Embedding đoạn dài và nhất quán chỉ mục}
+Trước sửa lỗi, 160/449 đoạn vượt cửa sổ encoder và có nguy cơ bị bỏ phần cuối. Cách mới chia thành cửa sổ tối đa 256 token với 64 token chồng lấp. Mỗi cửa sổ được mean pooling có mặt nạ, chuẩn hóa; các vector cửa sổ của cùng đoạn được trung bình rồi chuẩn hóa lại. Công thức khái quát với $W_d$ cửa sổ là:
+\begin{equation}
+ \mathbf e_d=\operatorname{norm}\!\left(\frac{1}{W_d}\sum_{w=1}^{W_d}\operatorname{norm}(\operatorname{pool}(d_w))\right).
+\end{equation}
+Đây là quy tắc tổng hợp của dự án, không phải bằng chứng rằng thông tin dài được hiểu hoàn hảo. Lợi ích kiểm chứng được là không bỏ âm thầm đuôi đoạn; ID và gold không thay đổi. Mọi phương pháp dùng cùng quy tắc, nên không đưa một phương pháp vào điều kiện embedding thuận lợi hơn.
+
+Chỉ mục được dựng trong thư mục phiên bản riêng, kiểm tra đủ corpus, vector và đồ thị rồi mới chuyển liên kết \code{current} bằng thao tác atomic. Searcher giữ một phiên bản khi đọc. Nếu OCR hoặc embedding lỗi, bản đang dùng vẫn được giữ. Health kiểm tra artifact, hash và cấu hình encoder; chỉ mục không hợp lệ dẫn tới trạng thái chưa sẵn sàng và HTTP503, thay vì trả ``ready'' rồi lỗi khi chat.
+
+\subsection{Ba chiến lược truy xuất}
+RAG vector mã hóa câu hỏi và lấy 5 đoạn cosine cao nhất trên toàn corpus. Hybrid không graph lấy 5 đoạn cao nhất theo $s_h$ trên cùng corpus, không mở rộng cạnh và không thêm điểm thưởng. GraphRAG thực hiện các bước sau:
+\begin{enumerate}
+\item Lấy 3 hạt giống TF-IDF và 2 hạt giống vector, loại trùng.
+\item Bổ sung đoạn theo chủ đề khớp và các đoạn kề hạt giống qua NEXT.
+\item Đi tối đa hai bước qua các quan hệ văn bản, xét cả hai chiều khi mở rộng; thêm tối đa 3 đoạn có điểm hybrid cao của mỗi văn bản liên quan có toàn văn.
+\item Nhận diện số hiệu/năm từ metadata và ý định hỏi quan hệ; bổ sung đoạn chứng cứ của cạnh đã được kiểm tra, cộng 0,7 điểm cho các đoạn này.
+\item Xếp hạng ứng viên, chọn top 5, lưu trace và áp dụng cùng trần chứng cứ.
+\end{enumerate}
+Điểm thưởng và tập ứng viên là một phần của phương pháp được đánh giá. Vì vậy, khác biệt với RAG vector đo cả gói chiến lược. Đối chứng hybrid giúp kiểm tra tín hiệu từ vựng, nhưng chưa tách riêng hiệu ứng của mở rộng cạnh, chủ đề, NEXT và điểm thưởng. Nhận diện số hiệu dựa trên metadata của mọi văn bản, không cài riêng theo ID câu hỏi của bộ test.
+
+\subsection{Sinh đáp án, từ chối và pacing}
+Gemini trả JSON gồm trạng thái, đáp án và danh sách ID nguồn. Nhánh trả lời yêu cầu citation có thật và khớp danh sách; nhánh thiếu chứng cứ chỉ chấp nhận câu chuẩn ``Chưa xác định được từ tập tài liệu.''. Các nhóm citation như \code{[ID1, ID2]} được kiểm tra từng ID. Validation cấu trúc không chấm độ đúng ngữ nghĩa, nên các phát biểu sai phạm vi vẫn phải được đánh giá nội dung.
+
+Model dùng trong lần đo là \code{gemini-3.5-flash-lite} \cite{gemini}. Cấu hình chung: temperature bằng 0, tối đa 2.048 token đầu ra, timeout 30 giây và một yêu cầu SDK cho mỗi lượt, không tự retry. Bộ điều phối trên cùng máy giữ khoảng cách ít nhất 5 giây giữa các request API/CLI bằng khóa tệp. Đây là nhịp khoảng 12 RPM; hạn mức 15 RPM do người dùng cung cấp chưa được coi là quota chung, vì Google quy định theo project, model và tier \cite{quota}.
+
+\subsection{Kiểm chứng trước phép đo}
+Đã hoàn tất 15 test hồi quy, compile Python, build TypeScript/Vite và HTTP smoke cho health/chat. Các test gồm sai phiên bản checkpoint, lỗi dựng chỉ mục, đoạn dài khác đuôi, từ chối kèm khẳng định, ID giả trong citation nhóm và các mode truy xuất. Test mô phỏng lỗi dịch vụ không gọi Gemini thật. Một lượt sinh HTTP kiểm tra sau sửa parser được lưu riêng và loại khỏi 40 lượt nghiên cứu chính. Kiểm tra bố cục giao diện bằng trình duyệt chưa thực hiện trong phiên review; không dùng build thành công để khẳng định đã kiểm tra đầy đủ giao diện.

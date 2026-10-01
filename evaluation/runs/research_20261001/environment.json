@@ -1,0 +1,35 @@
+{
+  "python": "3.13.9",
+  "node": "v18.19.1",
+  "npm": "9.2.0",
+  "runtime": {
+    "torch": "2.6.0",
+    "transformers": "5.12.1",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "networkx": "3.4.2",
+    "google-genai": "2.10.0",
+    "PyMuPDF": "1.28.0"
+  },
+  "effective_config": {
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "gemini_model": "gemini-3.5-flash-lite",
+    "top_k": 5,
+    "max_evidence_chars": 6500,
+    "generation_temperature": 0,
+    "embedding_window_tokens": 256,
+    "embedding_stride_tokens": 64,
+    "generation_timeout_ms": 30000,
+    "generation_max_output_tokens": 2048,
+    "min_api_interval_seconds": 5.0,
+    "embedding": {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "pooling": "normalized_window_mean_v1",
+      "window_tokens": 256,
+      "stride_tokens": 64
+    }
+  },
+  "requirements_sha256": "387cf5bfd0b80e363d7f69bcc3d370b64835a3c6bf25796649d3b00aa3cbba7e"
+}

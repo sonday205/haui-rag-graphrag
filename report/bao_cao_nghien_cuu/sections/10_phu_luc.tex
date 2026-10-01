@@ -1,0 +1,21 @@
+\section*{PHỤ LỤC: ĐỐI CHIẾU CÂU HỎI VÀ TÁI LẬP}
+\addcontentsline{toc}{section}{Phụ lục: Đối chiếu câu hỏi và tái lập}
+\noindent Bảng ghi điểm đúng ý chính sơ bộ: 1 đạt, 0 chưa đạt; TC là từ chối phù hợp ngoài corpus. Câu đầy đủ, gold, đáp án nguyên bản và ghi chú nằm trong hồ sơ thực nghiệm \cite{artifacts}.
+\begin{table}[H]
+\centering\small\setstretch{1.05}\renewcommand{\arraystretch}{1.12}
+\input{question_table}
+\end{table}
+
+\subsection*{Artifact cần giữ}
+\noindent\small
+\code{retrieval.json} và CSV lưu 174 lượt truy xuất; \code{answer_scores.json} lưu rubric, người/chương trình chấm và ghi chú; \code{generation_revalidated.json} lưu kết quả kiểm tra lại dẫn xuất. Log API gốc là \code{evaluation/runs/gemini_research_20261001_35lite.jsonl}. Bộ 20 câu nằm ở \code{evaluation/questions_research_20261001.jsonl}. Hash dùng tạo hình/bảng của báo cáo nằm ở \code{artifact_hashes.json} cạnh nguồn XeLaTeX.
+
+\subsection*{Lệnh kiểm tra và biên dịch}
+\noindent\small\setstretch{1.1}
+\begin{verbatim}
+HF_HUB_OFFLINE=1 python3 -m unittest discover -s tests -v
+python3 -m evaluation.research_study report
+cd report/bao_cao_nghien_cuu
+bash build.sh
+\end{verbatim}
+\noindent Lệnh \code{report} dựng báo cáo từ kết quả có sẵn; không gọi lại model. Chạy một đợt sinh mới cần run riêng, key hợp lệ và lưu lại snapshot. Không đưa API key vào nguồn báo cáo hoặc gói bàn giao.

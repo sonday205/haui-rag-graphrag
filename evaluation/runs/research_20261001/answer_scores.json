@@ -1,0 +1,419 @@
+{
+  "assessor": "Codex assistant AI; sơ bộ, chưa có người phản biện độc lập",
+  "timestamp_utc": "2026-10-01T08:19:36.973682+00:00",
+  "questions_sha256": "e93f078911b237baf618f86f97092dbe40ad8df204b03a5b83ca81085009ba2a",
+  "revalidated_sha256": "9784f4b451feaa0be9d9e023462a7c178f144c98f3a38b60168da5cbddce240e",
+  "rubric": {
+    "correct": "1 nếu đúng ý chính được hỏi và đúng phạm vi văn bản; trả sai trọng tâm/từ chối sai = 0.",
+    "complete": "1 nếu bao phủ các ý/điều kiện trong gold đã đóng băng; không đánh giá bằng cách dò từ khóa.",
+    "citation_support": "1 nếu citation hỗ trợ các khẳng định đã trả và đúng văn bản/phạm vi. Có thể 1 với đáp án thiếu/sai trọng tâm nếu các khẳng định thực tế được nguồn hỗ trợ; từ chối sai = 0.",
+    "appropriate_refusal": "Chỉ áp dụng 4 câu ngoài corpus; từ chối không kèm khẳng định ngoài chứng cứ = 1."
+  },
+  "limitations": [
+    "Gold S02 và V05 có yêu cầu độ đầy đủ khác nhau dù đều hỏi tuần rút; cần thống nhất ở bộ độc lập sau này.",
+    "Không chấm người độc lập; số nhỏ và câu quan hệ thiết kế sau graph.",
+    "M02 phân biệt 33 trong đợt đăng ký với 27 khối lượng học kỳ; không coi số 33 tự nó là hallucination."
+  ],
+  "rows": [
+    {
+      "question_id": "S02",
+      "method": "rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng tuần 03–08; thiếu học phí và điều kiện rút theo gold."
+    },
+    {
+      "question_id": "S02",
+      "method": "graph_rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng tuần 03–08; thiếu học phí và điều kiện rút theo gold."
+    },
+    {
+      "question_id": "S04",
+      "method": "rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng 30%; thiếu ngoại lệ bất khả kháng và hướng dẫn Bộ."
+    },
+    {
+      "question_id": "S04",
+      "method": "graph_rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng 30%; thiếu ngoại lệ bất khả kháng và hướng dẫn Bộ."
+    },
+    {
+      "question_id": "S06",
+      "method": "rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ 10 ngày làm việc, đơn, minh chứng và xác nhận Trưởng khoa."
+    },
+    {
+      "question_id": "S06",
+      "method": "graph_rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ 10 ngày làm việc, đơn, minh chứng và xác nhận Trưởng khoa."
+    },
+    {
+      "question_id": "S07",
+      "method": "rag",
+      "group": "mot_dieu",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng khoảng A/F ở Điều 9 khoản 7 bản hợp nhất."
+    },
+    {
+      "question_id": "S07",
+      "method": "graph_rag",
+      "group": "mot_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Trả quy đổi A=4/F=0 từ TT08, không trả khoảng điểm và không đúng văn bản được hỏi."
+    },
+    {
+      "question_id": "M01",
+      "method": "rag",
+      "group": "nhieu_dieu",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng GPA 2,00 và 3 tháng sau đủ điều kiện/nghĩa vụ; không liệt kê các điều kiện khác trong gold."
+    },
+    {
+      "question_id": "M01",
+      "method": "graph_rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối câu có đáp án; không truy xuất đủ hai chứng cứ."
+    },
+    {
+      "question_id": "M02",
+      "method": "rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "33 là giới hạn tạm trong đợt đăng ký chính; thiếu 27 theo khối lượng học kỳ và nghĩa vụ điều chỉnh. Tuần rút đúng nhưng thiếu học phí."
+    },
+    {
+      "question_id": "M02",
+      "method": "graph_rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Có chứng cứ cho 33 ở đợt đăng ký chính và tuần rút; thiếu mức 27 sau điều chỉnh và học phí. Không coi 33 là số bịa."
+    },
+    {
+      "question_id": "M05",
+      "method": "rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối câu có đáp án; thiếu chứng cứ chuyển đổi 50%."
+    },
+    {
+      "question_id": "M05",
+      "method": "graph_rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối câu có đáp án; thiếu chứng cứ chuyển đổi 50%."
+    },
+    {
+      "question_id": "M08",
+      "method": "rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối vì thiếu đoạn ít nhất hai điểm thành phần dù tìm được 30% trực tuyến."
+    },
+    {
+      "question_id": "M08",
+      "method": "graph_rag",
+      "group": "nhieu_dieu",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối vì thiếu đoạn ít nhất hai điểm thành phần dù tìm được 30% trực tuyến."
+    },
+    {
+      "question_id": "V01",
+      "method": "rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng 6 năm; thiếu các ngoại lệ trong gold và đoạn gốc."
+    },
+    {
+      "question_id": "V01",
+      "method": "graph_rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 0,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng 6 năm; thiếu các ngoại lệ trong gold và đoạn gốc."
+    },
+    {
+      "question_id": "V02",
+      "method": "rag",
+      "group": "phien_ban",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối do bỏ lỡ Điều 22 khoản 2."
+    },
+    {
+      "question_id": "V02",
+      "method": "graph_rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng QĐ 787/2018 và ngày 09/08/2018, dẫn Điều 22 khoản 2."
+    },
+    {
+      "question_id": "V04",
+      "method": "rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ hai lần thời gian chuẩn và ngoại lệ chính sách ưu tiên."
+    },
+    {
+      "question_id": "V04",
+      "method": "graph_rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ hai lần thời gian chuẩn và ngoại lệ chính sách ưu tiên."
+    },
+    {
+      "question_id": "V05",
+      "method": "rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng tuần 03–08 theo gold V05; gold này không yêu cầu liệt kê học phí/ngoại lệ."
+    },
+    {
+      "question_id": "V05",
+      "method": "graph_rag",
+      "group": "phien_ban",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đúng tuần 03–08 theo gold V05; gold này không yêu cầu liệt kê học phí/ngoại lệ."
+    },
+    {
+      "question_id": "R01",
+      "method": "rag",
+      "group": "quan_he",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối do thiếu chứng cứ hai văn bản bị thay thế."
+    },
+    {
+      "question_id": "R01",
+      "method": "graph_rag",
+      "group": "quan_he",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ 254/2023, 1432/2023 và ngày; giữ lỗi dấu gạch OCR, không làm đổi số hiệu."
+    },
+    {
+      "question_id": "R02",
+      "method": "rag",
+      "group": "quan_he",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối; chỉ tìm một phần chứng cứ đa trang."
+    },
+    {
+      "question_id": "R02",
+      "method": "graph_rag",
+      "group": "quan_he",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ TT08/2021 và QĐ239/2022 ở hai trang. Lỗi chữ OCR trong ký hiệu phải đối chiếu PDF."
+    },
+    {
+      "question_id": "R03",
+      "method": "rag",
+      "group": "quan_he",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối do thiếu chứng cứ quan hệ sửa đổi/thay thế."
+    },
+    {
+      "question_id": "R03",
+      "method": "graph_rag",
+      "group": "quan_he",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ QĐ663 sửa QĐ787 và bản hợp nhất thay văn bản 663. JSON được revalidate offline sau sửa citation nhóm."
+    },
+    {
+      "question_id": "R06",
+      "method": "rag",
+      "group": "quan_he",
+      "correct": 0,
+      "complete": 0,
+      "citation_support": 0,
+      "appropriate_refusal": null,
+      "note": "Từ chối vì không tìm đoạn thay thế hai quyết định."
+    },
+    {
+      "question_id": "R06",
+      "method": "graph_rag",
+      "group": "quan_he",
+      "correct": 1,
+      "complete": 1,
+      "citation_support": 1,
+      "appropriate_refusal": null,
+      "note": "Đủ QĐ25/2006 và QĐ43/2007, citation đúng trang chứng cứ."
+    },
+    {
+      "question_id": "U01",
+      "method": "rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U01",
+      "method": "graph_rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U02",
+      "method": "rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U02",
+      "method": "graph_rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U03",
+      "method": "rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U03",
+      "method": "graph_rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U05",
+      "method": "rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    },
+    {
+      "question_id": "U05",
+      "method": "graph_rag",
+      "group": "ngoai_corpus",
+      "correct": null,
+      "complete": null,
+      "citation_support": null,
+      "appropriate_refusal": 1,
+      "note": "Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "questions_file": "questions_research_20261001.jsonl",
+  "questions_sha256": "e93f078911b237baf618f86f97092dbe40ad8df204b03a5b83ca81085009ba2a",
+  "code_sha256": "4f4266c5e68d2efcc8df595901613283c212a063a9de7b6407dfea6688a08da2",
+  "corpus_sha256": "38256dc6adcf877c83be9b1f259d2494840e975bdad6b919c0f01c56768f0358",
+  "vectors_sha256": "02ecbc2c677090721cb3df672a6261e30ce2edb8ba76fcb57c35eda447d98dc3",
+  "graph_sha256": "5f62f217c35f26a87a78569d44d1599b48a76b21d8d349a3fedee8c9449e1dcc",
+  "config": {
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "gemini_model": "gemini-3.5-flash-lite",
+    "top_k": 5,
+    "max_evidence_chars": 6500,
+    "generation_temperature": 0,
+    "embedding_window_tokens": 256,
+    "embedding_stride_tokens": 64,
+    "generation_timeout_ms": 30000,
+    "generation_max_output_tokens": 2048,
+    "min_api_interval_seconds": 5.0,
+    "embedding": {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "pooling": "normalized_window_mean_v1",
+      "window_tokens": 256,
+      "stride_tokens": 64
+    }
+  },
+  "runtime_versions": {
+    "torch": "2.6.0",
+    "transformers": "5.12.1",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "networkx": "3.4.2",
+    "google-genai": "2.10.0",
+    "PyMuPDF": "1.28.0"
+  },
+  "runner_sha256": "41084d544382359188df045477eb0e36c6bf5f04eb23543afbdd4efe86b9edbb",
+  "method_order": "alternating_by_question_v1",
+  "min_interval_seconds": 5.0,
+  "selected_question_ids": [
+    "S02",
+    "S04",
+    "S06",
+    "S07",
+    "M01",
+    "M02",
+    "M05",
+    "M08",
+    "V01",
+    "V02",
+    "V04",
+    "V05",
+    "R01",
+    "R02",
+    "R03",
+    "R06",
+    "U01",
+    "U02",
+    "U03",
+    "U05"
+  ],
+  "started_utc": "2026-10-01T08:11:52.688519+00:00"
+}

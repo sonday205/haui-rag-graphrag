@@ -1,0 +1,41 @@
+question_id,method,group,correct,complete,citation_support,appropriate_refusal,note
+S02,rag,mot_dieu,1,0,1,,Đúng tuần 03–08; thiếu học phí và điều kiện rút theo gold.
+S02,graph_rag,mot_dieu,1,0,1,,Đúng tuần 03–08; thiếu học phí và điều kiện rút theo gold.
+S04,rag,mot_dieu,1,0,1,,Đúng 30%; thiếu ngoại lệ bất khả kháng và hướng dẫn Bộ.
+S04,graph_rag,mot_dieu,1,0,1,,Đúng 30%; thiếu ngoại lệ bất khả kháng và hướng dẫn Bộ.
+S06,rag,mot_dieu,1,1,1,,"Đủ 10 ngày làm việc, đơn, minh chứng và xác nhận Trưởng khoa."
+S06,graph_rag,mot_dieu,1,1,1,,"Đủ 10 ngày làm việc, đơn, minh chứng và xác nhận Trưởng khoa."
+S07,rag,mot_dieu,1,1,1,,Đúng khoảng A/F ở Điều 9 khoản 7 bản hợp nhất.
+S07,graph_rag,mot_dieu,0,0,0,,"Trả quy đổi A=4/F=0 từ TT08, không trả khoảng điểm và không đúng văn bản được hỏi."
+M01,rag,nhieu_dieu,1,0,1,,"Đúng GPA 2,00 và 3 tháng sau đủ điều kiện/nghĩa vụ; không liệt kê các điều kiện khác trong gold."
+M01,graph_rag,nhieu_dieu,0,0,0,,Từ chối câu có đáp án; không truy xuất đủ hai chứng cứ.
+M02,rag,nhieu_dieu,0,0,1,,33 là giới hạn tạm trong đợt đăng ký chính; thiếu 27 theo khối lượng học kỳ và nghĩa vụ điều chỉnh. Tuần rút đúng nhưng thiếu học phí.
+M02,graph_rag,nhieu_dieu,0,0,1,,Có chứng cứ cho 33 ở đợt đăng ký chính và tuần rút; thiếu mức 27 sau điều chỉnh và học phí. Không coi 33 là số bịa.
+M05,rag,nhieu_dieu,0,0,0,,Từ chối câu có đáp án; thiếu chứng cứ chuyển đổi 50%.
+M05,graph_rag,nhieu_dieu,0,0,0,,Từ chối câu có đáp án; thiếu chứng cứ chuyển đổi 50%.
+M08,rag,nhieu_dieu,0,0,0,,Từ chối vì thiếu đoạn ít nhất hai điểm thành phần dù tìm được 30% trực tuyến.
+M08,graph_rag,nhieu_dieu,0,0,0,,Từ chối vì thiếu đoạn ít nhất hai điểm thành phần dù tìm được 30% trực tuyến.
+V01,rag,phien_ban,1,0,1,,Đúng 6 năm; thiếu các ngoại lệ trong gold và đoạn gốc.
+V01,graph_rag,phien_ban,1,0,1,,Đúng 6 năm; thiếu các ngoại lệ trong gold và đoạn gốc.
+V02,rag,phien_ban,0,0,0,,Từ chối do bỏ lỡ Điều 22 khoản 2.
+V02,graph_rag,phien_ban,1,1,1,,"Đúng QĐ 787/2018 và ngày 09/08/2018, dẫn Điều 22 khoản 2."
+V04,rag,phien_ban,1,1,1,,Đủ hai lần thời gian chuẩn và ngoại lệ chính sách ưu tiên.
+V04,graph_rag,phien_ban,1,1,1,,Đủ hai lần thời gian chuẩn và ngoại lệ chính sách ưu tiên.
+V05,rag,phien_ban,1,1,1,,Đúng tuần 03–08 theo gold V05; gold này không yêu cầu liệt kê học phí/ngoại lệ.
+V05,graph_rag,phien_ban,1,1,1,,Đúng tuần 03–08 theo gold V05; gold này không yêu cầu liệt kê học phí/ngoại lệ.
+R01,rag,quan_he,0,0,0,,Từ chối do thiếu chứng cứ hai văn bản bị thay thế.
+R01,graph_rag,quan_he,1,1,1,,"Đủ 254/2023, 1432/2023 và ngày; giữ lỗi dấu gạch OCR, không làm đổi số hiệu."
+R02,rag,quan_he,0,0,0,,Từ chối; chỉ tìm một phần chứng cứ đa trang.
+R02,graph_rag,quan_he,1,1,1,,Đủ TT08/2021 và QĐ239/2022 ở hai trang. Lỗi chữ OCR trong ký hiệu phải đối chiếu PDF.
+R03,rag,quan_he,0,0,0,,Từ chối do thiếu chứng cứ quan hệ sửa đổi/thay thế.
+R03,graph_rag,quan_he,1,1,1,,Đủ QĐ663 sửa QĐ787 và bản hợp nhất thay văn bản 663. JSON được revalidate offline sau sửa citation nhóm.
+R06,rag,quan_he,0,0,0,,Từ chối vì không tìm đoạn thay thế hai quyết định.
+R06,graph_rag,quan_he,1,1,1,,"Đủ QĐ25/2006 và QĐ43/2007, citation đúng trang chứng cứ."
+U01,rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U01,graph_rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U02,rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U02,graph_rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U03,rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U03,graph_rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U05,rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."
+U05,graph_rag,ngoai_corpus,,,,1,"Ngoài corpus: từ chối chuẩn, không khẳng định dữ liệu cá nhân/lịch/hiệu lực hiện hành."

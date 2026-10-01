@@ -1,0 +1,313 @@
+[
+  {
+    "source": "QC2023",
+    "relation": "CONSOLIDATES",
+    "target": "QD744_2021",
+    "evidence_document": "QC2023",
+    "evidence_page": 1,
+    "evidence_text": "Hợp nhất quy chế đào tạo ban hành theo quyết định 744/QĐ-ĐHCN",
+    "note": "Bản hợp nhất ghi QĐ 744/2021 là văn bản gốc; bản QĐ riêng chưa nằm trong corpus.",
+    "evidence_article_ids": [
+      "QC2023-P001-PREFACE"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QC2023",
+    "relation": "CONSOLIDATES",
+    "target": "QD666_2023",
+    "evidence_document": "QC2023",
+    "evidence_page": 1,
+    "evidence_text": "quyết định sửa đổi một số điều của quy chế 744 ban hành theo Quyết định 666/QĐ-ĐHCN",
+    "note": "Bản hợp nhất ghi QĐ 666/2023 là văn bản sửa đổi; bản QĐ riêng chưa nằm trong corpus.",
+    "evidence_article_ids": [
+      "QC2023-P001-PREFACE"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QD666_2023",
+    "relation": "AMENDS",
+    "target": "QD744_2021",
+    "evidence_document": "QC2023",
+    "evidence_page": 1,
+    "evidence_text": "quyết định sửa đổi một số điều của quy chế 744 ban hành theo Quyết định 666/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "QC2023-P001-PREFACE"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QC2023",
+    "relation": "REPLACES",
+    "target": "QD1017_2016",
+    "evidence_document": "QC2023",
+    "evidence_page": 28,
+    "evidence_text": "Quy chế này thay thế Quy chế Đào tạo đại học hệ vừa làm vừa học",
+    "evidence_article_ids": [
+      "QC2023-D22-K2-P01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QC2023",
+    "relation": "REPLACES",
+    "target": "QD479_2018",
+    "evidence_document": "QC2023",
+    "evidence_page": 28,
+    "evidence_text": "Quy định liên kết đào tạo trình độ đại học",
+    "evidence_article_ids": [
+      "QC2023-D22-K2-P01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QC2023",
+    "relation": "REPLACES",
+    "target": "QD787_2018",
+    "evidence_document": "QC2023",
+    "evidence_page": 28,
+    "evidence_text": "Quy chế Đào tạo đại học và cao đẳng hệ chính quy theo học chế tín chỉ",
+    "evidence_article_ids": [
+      "QC2023-D22-K2-P01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QC2023",
+    "relation": "REPLACES",
+    "target": "QD663_2019",
+    "evidence_document": "QC2023",
+    "evidence_page": 28,
+    "evidence_text": "ban hành kèm theo Quyết định số 663/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "QC2023-D22-K2-P01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QD847_2017",
+    "relation": "AMENDS",
+    "target": "QD1015_2015",
+    "evidence_document": "QD847_2017",
+    "evidence_page": 1,
+    "evidence_text": "Điều 1. Sửa đổi, bổ sung một số điều của Quy chế đào tạo",
+    "evidence_article_ids": [
+      "QD847_2017-P001-C02"
+    ],
+    "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2542.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QD663_2019",
+    "relation": "AMENDS",
+    "target": "QD787_2018",
+    "evidence_document": "QD663_2019",
+    "evidence_page": 1,
+    "evidence_text": "Điều 1. Sửa đổi, bổ sung một số điều của Quy chế đào tạo",
+    "evidence_article_ids": [
+      "QD663_2019-P001-C02"
+    ],
+    "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2712.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QD721_2024",
+    "relation": "REPLACES",
+    "target": "QD254_2023",
+    "evidence_document": "QD721_2024",
+    "evidence_page": 1,
+    "evidence_text": "Điều 2. Quyết định này có hiệu lực từ ngày ký ban hành và thay thế Quyết",
+    "evidence_article_ids": [
+      "QD721_2024-P001-C02"
+    ],
+    "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QD721_2024",
+    "relation": "REPLACES",
+    "target": "QD1432_2023",
+    "evidence_document": "QD721_2024",
+    "evidence_page": 1,
+    "evidence_text": "Quyết định số 1432/QĐ- -ĐHCN",
+    "note": "OCR nhận dư dấu gạch; đối chiếu bản PDF và trang HaUI.",
+    "evidence_article_ids": [
+      "QD721_2024-P001-C02"
+    ],
+    "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "KL_SICT",
+    "relation": "REPLACES",
+    "target": "QD239_2022",
+    "evidence_document": "KL_SICT",
+    "evidence_page": 2,
+    "evidence_text": "thay thế Quyết định số 239/QĐÐ-ĐHCN",
+    "evidence_article_ids": [
+      "KL_SICT-P002-C01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=2",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "HP_SICT",
+    "relation": "SUPPLEMENTS",
+    "target": "QD454_2019",
+    "evidence_document": "HP_SICT",
+    "evidence_page": 1,
+    "evidence_text": "được bổ sung thêm vào danh sách kèm theo Quyết định số 454/QĐÐ-ĐHCN",
+    "evidence_article_ids": [
+      "HP_SICT-P001-C02"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "NN_SICT",
+    "relation": "REPLACES",
+    "target": "QD88_2021",
+    "evidence_document": "NN_SICT",
+    "evidence_page": 1,
+    "evidence_text": "thay thế Quyết định số: 88/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "NN_SICT-P001-C02"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29675.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "TT08_2021",
+    "relation": "REPLACES",
+    "target": "QD25_2006",
+    "evidence_document": "TT08_2021",
+    "evidence_page": 1,
+    "evidence_text": "thay thế Quyết định số 25/2006/QĐ-BGDĐT",
+    "evidence_article_ids": [
+      "TT08_2021-P001-C02"
+    ],
+    "evidence_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "TT08_2021",
+    "relation": "REPLACES",
+    "target": "QD43_2007",
+    "evidence_document": "TT08_2021",
+    "evidence_page": 1,
+    "evidence_text": "Quyết định số 43/2007/QĐ-BGDĐT",
+    "evidence_article_ids": [
+      "TT08_2021-P001-C02"
+    ],
+    "evidence_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "KL_SICT",
+    "relation": "CITES",
+    "target": "TT08_2021",
+    "evidence_document": "KL_SICT",
+    "evidence_page": 1,
+    "evidence_text": "Căn cứ Thông tư số 08/2021/TT-BGDĐT",
+    "evidence_article_ids": [
+      "KL_SICT-P001-C01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "KL_SICT",
+    "relation": "CITES",
+    "target": "QD744_2021",
+    "evidence_document": "KL_SICT",
+    "evidence_page": 1,
+    "evidence_text": "Căn cứ Quyết định số 744/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "KL_SICT-P001-C01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "KL_SICT",
+    "relation": "CITES",
+    "target": "QD666_2023",
+    "evidence_document": "KL_SICT",
+    "evidence_page": 1,
+    "evidence_text": "Quyết định số 666/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "KL_SICT-P001-C01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "QD721_2024",
+    "relation": "CITES",
+    "target": "QD744_2021",
+    "evidence_document": "QD721_2024",
+    "evidence_page": 1,
+    "evidence_text": "Căn cứ Quyết định số 744/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "QD721_2024-P001-C01"
+    ],
+    "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "HP_SICT",
+    "relation": "CITES",
+    "target": "QD744_2021",
+    "evidence_document": "HP_SICT",
+    "evidence_page": 1,
+    "evidence_text": "Căn cứ Quyết định số 744/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "HP_SICT-P001-C01"
+    ],
+    "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  },
+  {
+    "source": "DA2019",
+    "relation": "CITES",
+    "target": "QD787_2018",
+    "evidence_document": "DA2019",
+    "evidence_page": 1,
+    "evidence_text": "Quyết định số 787/QĐ-ĐHCN",
+    "evidence_article_ids": [
+      "DA2019-P001-C01"
+    ],
+    "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf#page=1",
+    "review_status": "ocr_page_and_chunk_verified",
+    "validity_claim": "none"
+  }
+]

@@ -1,0 +1,98 @@
+% Biên dịch bằng XeLaTeX. Nội dung được tách theo phần để dễ sửa.
+\documentclass[12pt,a4paper]{extarticle}
+% extarticle không có tùy chọn 13pt; đặt thực sự 13pt để tránh bị bỏ qua.
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{13pt}{15.6pt}}
+\makeatother
+\normalsize
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Liberation Serif}}
+\setsansfont{Liberation Sans}
+\setmonofont[Scale=0.78]{Liberation Mono}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.4}
+\usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array,float}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\usepackage{etoolbox}
+\AtBeginEnvironment{table}{\setstretch{1.1}}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{enumitem,caption,fancyhdr,titlesec,microtype}
+\usepackage[hidelinks,unicode,hypertexnames=false]{hyperref}
+\hypersetup{pdftitle={So sánh RAG truyền thống và GraphRAG trong hỏi đáp có dẫn nguồn về quy chế đào tạo của HaUI},pdfauthor={Trần Trung Hiếu},pdfsubject={Nghiên cứu thực nghiệm thăm dò RAG và GraphRAG}}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\refname}{TÀI LIỆU THAM KHẢO}
+\renewcommand{\figurename}{Hình}
+\renewcommand{\tablename}{Bảng}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.4cm,itemsep=2pt,topsep=4pt}
+\setlist[enumerate]{leftmargin=1.4cm,itemsep=2pt,topsep=4pt}
+\renewcommand{\arraystretch}{1.2}
+\titleformat{\section}{\large\bfseries}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{.5em}{}
+\titlespacing*{\section}{0pt}{8pt}{8pt}
+\titlespacing*{\subsection}{0pt}{7pt}{4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Nghiên cứu RAG và GraphRAG}
+\fancyhead[R]{\small Trần Trung Hiếu}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{16pt}
+\newcommand{\code}[1]{{\ttfamily\expandafter\nolinkurl\expandafter{\detokenize{#1}}}}
+\newcommand{\sourcefile}[1]{\par\noindent{\footnotesize Nguồn số liệu: \code{#1}.}\par}
+\newcommand{\blankfield}{\rule{5.1cm}{0.3pt}}
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\draw[blue!55!black,line width=2pt] ($(current page.north west)+(1.5cm,-1.5cm)$) rectangle ($(current page.south east)+(-1.5cm,1.5cm)$);
+\draw[blue!55!black,line width=.6pt] ($(current page.north west)+(1.65cm,-1.65cm)$) rectangle ($(current page.south east)+(-1.65cm,1.65cm)$);
+\end{tikzpicture}
+\centering
+\vspace*{.9cm}
+{\fontsize{15}{21}\selectfont\bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI\par}
+\vspace{.35cm}
+{\fontsize{14}{20}\selectfont KHOA: \rule{6cm}{.3pt}\par}
+\vspace{2cm}
+{\fontsize{19}{27}\selectfont\bfseries BÁO CÁO NGHIÊN CỨU KHOA HỌC\par}
+\vspace{.3cm}
+{\fontsize{14}{20}\selectfont DỰ ÁN CÁ NHÂN\par}
+\vspace{1.1cm}
+{\fontsize{18}{26}\selectfont\bfseries SO SÁNH RAG TRUYỀN THỐNG VÀ GRAPHRAG TRONG HỎI ĐÁP CÓ DẪN NGUỒN VỀ QUY CHẾ ĐÀO TẠO CỦA TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI\par}
+\vspace{1.6cm}
+\begin{tabular}{ll}
+Sinh viên thực hiện: & \textbf{Trần Trung Hiếu}\\[.35cm]
+Mã sinh viên: & \blankfield\\[.35cm]
+Lớp: & \blankfield\\[.35cm]
+Giảng viên hướng dẫn: & \blankfield\\[.35cm]
+Đơn vị/bộ môn: & \blankfield
+\end{tabular}
+\vfill
+{\fontsize{14}{20}\selectfont Hà Nội, tháng \rule{1cm}{.3pt} năm \rule{1.3cm}{.3pt}\par}
+\vspace{.7cm}
+\end{titlepage}
+\pagenumbering{roman}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
+\input{sections/00_tom_tat}
+\clearpage
+\pagenumbering{arabic}
+\input{sections/01_gioi_thieu}
+\input{sections/02_co_so}
+\input{sections/03_du_lieu}
+\input{sections/04_he_thong}
+\input{sections/05_thuc_nghiem}
+\input{sections/06_ket_qua}
+\input{sections/07_phan_tich}
+\input{sections/08_ket_luan}
+\clearpage
+\input{sections/09_tai_lieu}
+\clearpage
+\input{sections/10_phu_luc}
+\end{document}

@@ -1,0 +1,88 @@
+\section{Thiết kế phép so sánh}
+\subsection{Bộ câu hỏi và đơn vị quan sát}
+Ba bộ được chạy ở tầng truy xuất. Bộ 30 câu ban đầu có 25 câu có gold, gồm 12 một điều, 8 nhiều điều và 5 phiên bản; 5 câu không có thông tin không được tính Recall. Bộ 8 câu quan hệ yêu cầu nối chứng cứ giữa văn bản hoặc trang. Bộ 20 dùng cho sinh chọn trước đáp án mới, mỗi nhóm có 4 câu: một điều, nhiều điều, phiên bản, quan hệ và ngoài corpus.
+
+\begin{table}[H]
+\centering\small
+\caption{Quy mô thực nghiệm và mẫu số đánh giá}
+\begin{tabularx}{\textwidth}{X r r X}
+\toprule Bộ & Câu & Có gold & Phép đo\\
+\midrule
+30 câu nguyên trạng & 30 & 25 & Ba phương pháp truy xuất: 90 lượt.\\
+8 câu quan hệ & 8 & 8 & Ba phương pháp truy xuất: 24 lượt.\\
+20 câu có phạm vi rõ & 20 & 16 & Ba truy xuất: 60 lượt; hai sinh: 40 request.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Tổng 174 lượt truy xuất là $(30+8+20)\times3$, không phải 174 câu khác nhau. Bộ 20 kế thừa câu trong hai bộ trước; tám câu S/M thêm phạm vi ``bản hợp nhất QĐ744/2021 và QĐ666/2023''. Đây là thay đổi wording để giảm mơ hồ, không tạo một tập độc lập. Không cộng ba bộ rồi báo cáo như một mẫu độc lập lớn hơn.
+
+\subsection{Phân tầng theo yêu cầu chứng cứ}
+Câu một điều kiểm tra khả năng xác định một quy định cụ thể. Câu nhiều điều cần phối hợp ít nhất hai ý hoặc điều khoản. Câu phiên bản yêu cầu xác định đúng văn bản, giới hạn thời gian hoặc điều thay thế. Câu quan hệ kiểm tra các phát biểu sửa đổi, viện dẫn, thay thế giữa văn bản. Câu ngoài corpus kiểm tra việc từ chối trả lời học phí tương lai, lịch/hồ sơ cá nhân hoặc chương trình không có chứng cứ trong tập thu thập.
+
+Phân tầng trước khi phân tích giúp tránh việc trung bình chung che khuất lỗi. Ví dụ, một phương pháp có thể tốt ở quan hệ nhưng kém hơn ở câu một điều; nếu bộ test chứa nhiều câu quan hệ thì mức tăng trung bình sẽ lớn. Bộ 20 cân bằng năm nhóm để thuận tiện đối chiếu, nhưng chưa phản ánh phân bố câu hỏi thực tế của sinh viên.
+
+\subsection{Gold và nguy cơ thiên lệch}
+Gold là đáp án và ID chứng cứ nội bộ đã đóng băng. Các câu quan hệ được viết sau khi xây đồ thị, nên có thể thuận lợi cho các cạnh đã biết. Chưa có người độc lập soạn câu, duyệt gold hoặc chấm đáp án. Gold S02 đòi hỏi học phí và điều kiện rút dù câu hỏi hỏi tuần; V05 chỉ yêu cầu tuần. Hai hệ thống được chấm cùng gold ở từng câu, nhưng sự không đồng nhất này ảnh hưởng cách hiểu độ đầy đủ và phải sửa trong bộ mới, không sửa ngược để tăng điểm hiện tại.
+
+\subsection{Biến được giữ chung và biến thay đổi}
+\begin{table}[H]
+\centering\small
+\caption{Điều kiện kiểm soát của phép so sánh}
+\begin{tabularx}{\textwidth}{l X}
+\toprule Thành phần & Thiết lập\\
+\midrule
+Corpus và ID & Cùng 449 đoạn, hash và phiên bản chỉ mục.\\
+Embedding & Cùng MiniLM đa ngôn ngữ, revision và pooling cửa sổ.\\
+Truy xuất đầu ra & Top 5; cùng trần 6.500 ký tự chứng cứ cho bộ sinh.\\
+Model sinh & Gemini 3.5 Flash-Lite, cùng prompt và JSON schema.\\
+Sinh và dịch vụ & Temperature 0; 2.048 token; timeout 30 giây; không retry.\\
+Thứ tự gọi & Đảo RAG/GraphRAG luân phiên theo câu.\\
+Thứ tự truy xuất & Xoay thứ tự ba phương pháp theo câu, warm encoder trước đo.\\
+Biến thay đổi & Tập ứng viên, tín hiệu xếp hạng, mở rộng đồ thị và điểm thưởng.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Giới hạn ký tự chung không làm số token thực tế bằng nhau: hai phương pháp lấy nội dung khác nhau và tạo đáp án dài khác nhau. Top 5 chung cũng chưa kiểm soát độ bao phủ khi gold trải trên nhiều đoạn. Vì vậy, đây là so sánh hai pipeline trong cùng ngân sách cấu hình, không phải phép đo chỉ một biến ``có đồ thị''.
+
+\subsection{Quy trình đo và lưu vết}
+Trước đo, corpus, vector, graph, cấu hình và runtime được ghi fingerprint. Snapshot câu hỏi được lưu cùng run; checkpoint bị chặn nếu cấu hình hiệu dụng hoặc model thay đổi. Đánh giá truy xuất ghi danh sách gold, ID trả về, Recall, độ trễ và trace. Đánh giá sinh ghi JSON thô, lỗi, model/provider, token, thời điểm request, thời gian chờ pacing và thời gian pipeline. Các artifact cũ được giữ nguyên.
+
+Có 40 request thật cho 20 cặp, không lỗi dịch vụ hoặc quota trong run. R03/GraphRAG ban đầu bị validator chặn vì nhóm citation hai ID. Sau sửa parser, toàn bộ JSON thô đã lưu được kiểm tra lại offline: 20/20 cặp hợp lệ, không sửa đáp án thô, không gọi API mới. Artifact dẫn xuất ghi hash log gốc và validator. Token và thời gian vẫn lấy request gốc; không mô tả sự kiện này như một đợt gọi lại model sau sửa.
+
+\subsection{Điều kiện thời gian và môi trường}
+Runtime ghi nhận Python 3.13.9, Torch 2.6.0, NumPy 2.2.6, scikit-learn 1.7.2, NetworkX 3.4.2 và google-genai 2.10.0. Chỉ mục dựng khoảng 28,80 giây, không bao gồm tạo OCR thủ công hoặc tải encoder lần đầu. Truy xuất chạy trên CPU; phép đo truy xuất diễn ra khi tiến trình đánh giá Gemini cũng hoạt động, có outlier. Nghiên cứu không kiểm tra nhiều người dùng đồng thời, không khảo sát tải hay độ ổn định qua nhiều ngày. Một lần đo chỉ hỗ trợ mô tả run này.
+
+\subsection{Chỉ số truy xuất và đáp án}
+Với câu $i$, gọi $G_i$ là tập gold và $R_i^5$ là top 5. Recall được tính:
+\begin{equation}
+ \mathrm{Recall@5}_i=\frac{|G_i\cap R_i^5|}{|G_i|},\qquad
+ \overline{\mathrm{Recall@5}}=\frac{1}{N_g}\sum_{i:|G_i|>0}\mathrm{Recall@5}_i.
+\end{equation}
+Mỗi câu có trọng số như nhau, không phải trung bình gộp mọi gold. All-gold là số câu có $G_i\subseteq R_i^5$. Hai chỉ số khác nhau: tăng số gold ở câu trước đây thiếu nhiều có thể làm Recall tăng dù số câu tìm đủ giảm. Câu không có gold được loại khỏi mẫu số, không đặt Recall bằng 0 hoặc 1.
+
+\begin{table}[H]
+\centering\small
+\caption{Rubric nhị phân dùng chấm sơ bộ 40 đáp án}
+\begin{tabularx}{\textwidth}{l X}
+\toprule Chỉ số & Điều kiện đạt\\
+\midrule
+Đúng ý chính & Đúng thông tin được hỏi và đúng phạm vi văn bản; trả sai trọng tâm hoặc từ chối sai là 0.\\
+Đủ ý & Bao phủ các ý, điều kiện, ngoại lệ mà gold của câu yêu cầu.\\
+Nguồn hỗ trợ & Những phát biểu đã trả được citation hỗ trợ và đúng phạm vi; có thể đạt dù đáp án thiếu ý.\\
+Từ chối phù hợp & Chỉ áp dụng câu ngoài corpus; từ chối chuẩn, không thêm khẳng định ngoài chứng cứ.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Trợ lý AI đối chiếu từng đáp án với gold và chứng cứ, ghi chú lý do. Đây không phải kết quả chấm người hoặc một bộ chấm đã được kiểm định. Không dùng dò từ khóa để thay thế đọc nội dung. Nguồn hỗ trợ và đúng ý chính được tách riêng: câu M02 có thể dẫn đúng nguồn của 33 tín chỉ nhưng chưa trả mức khối lượng cuối cùng 27 tín chỉ trong gold. Mẫu số nội dung là 16 câu trả lời được, còn mẫu số từ chối là 4 câu ngoài corpus.
+
+\subsection{Độ trễ, token và so sánh cặp}
+Độ trễ pipeline đo sau khi encoder/index đã nạp, loại thời gian chờ pacing; \code{wall_ms} và \code{pacing_wait_ms} được lưu riêng. Trung vị hỗ trợ đọc dữ liệu khi có outlier, còn trung bình phản ánh các giá trị của run. Token vào/ra lấy từ phản hồi API, cộng trên 20 lượt của mỗi phương pháp. Không ước tính tiền hoặc tuyên bố tốc độ ổn định chỉ từ lần chạy này.
+
+Với điểm đúng ý chính, mỗi câu ghép RAG và GraphRAG thành một cặp. Kiểm định McNemar exact tương đương nhị thức hai phía trên các cặp bất đồng. Nếu $b=5$ cặp GraphRAG đúng hơn và $c=2$ cặp RAG đúng hơn, xác suất tham khảo là:
+\begin{equation}
+ p=2\sum_{j=0}^{2}\binom{7}{j}(0{,}5)^7=0{,}453125.
+\end{equation}
+Phép tính chỉ mang tính thăm dò. Bộ câu không lấy mẫu ngẫu nhiên độc lập; giá trị $p$ không loại bỏ thiên lệch và không chứng minh hai phương pháp tương đương. Độ lớn hiệu ứng và phân tích trường hợp được đọc cùng hạn chế mẫu.

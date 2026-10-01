@@ -1,0 +1,9 @@
+method,category,questions,recall_denominator,mean_recall_at_5,mean_latency_ms,generated_answers
+graph_rag,khong_co_thong_tin,5,0,,20.92,0
+graph_rag,mot_dieu,12,12,0.8333,15.28,0
+graph_rag,nhieu_dieu,8,8,0.4375,22.65,0
+graph_rag,phien_ban,5,5,1.0,21.09,0
+rag,khong_co_thong_tin,5,0,,17.39,0
+rag,mot_dieu,12,12,0.8333,14.12,0
+rag,nhieu_dieu,8,8,0.5625,17.11,0
+rag,phien_ban,5,5,0.6,16.14,0

@@ -1,0 +1,67 @@
+\section{Tập dữ liệu và quản lý chứng cứ}
+\subsection{Nguồn và phạm vi corpus}
+Manifest ghi nhận 11 nguồn ứng viên, trong đó 9 PDF tải thành công; hai liên kết thất bại không được đưa vào chỉ mục. Tất cả tài liệu dùng trong phép thử được lấy từ các trang chính thức của HaUI. ``Nguồn chính thức'' mô tả nơi thu thập, không xác nhận mọi văn bản còn hiệu lực tại thời điểm nghiên cứu. Bản hợp nhất 2023 là nguồn chính cho gold của bộ 30 câu ban đầu \cite{qc2023}.
+
+\begin{table}[H]
+\centering\small
+\caption{Chín PDF trong corpus đóng băng}
+\begin{tabularx}{\textwidth}{l X r}
+\toprule ID & Nội dung nhận diện trong manifest & Trang\\
+\midrule
+QC2023 & Quy chế đại học hợp nhất QĐ744/2021 và QĐ666/2023 & 28\\
+QD663\_2019 & Sửa đổi quy chế tín chỉ theo QĐ787/2018 & 6\\
+DA2019 & Quy định đồ án, khóa luận tốt nghiệp & 7\\
+TT08\_2021 & Thông tư 08/2021/TT-BGDĐT đăng trên HaUI & 22\\
+KL\_SICT & Quy định đồ án, khóa luận đăng trên SICT & 26\\
+NN\_SICT & Quy định chuẩn đầu ra ngoại ngữ & 4\\
+HP\_SICT & Danh sách học phần thay thế năm 2022 & 21\\
+QD721\_2024 & Quy định đánh giá kết quả học tập QĐ721/2024 & 59\\
+QD847\_2017 & Sửa đổi quy chế theo QĐ1015/2015 & 4\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\sourcefile{data/source_manifest.csv}
+
+Tổng 177 trang. Manifest lưu URL, ngày thu thập, SHA-256, đường dẫn và tình trạng OCR. PDF được giữ để đối chiếu; ID nhận diện không xác nhận hiệu lực.
+
+\subsection{Tách đoạn và nguồn gốc}
+Một PDF có lớp chữ được trích bằng PyMuPDF, phân theo Điều/khoản và chia đoạn dài ở ranh giới từ, cho 136 đoạn gồm cả phần mở đầu. Tám PDF ảnh quét dùng Markdown OCR do người dùng cung cấp, chia theo mốc trang và giới hạn khoảng 1.000 ký tự mỗi đoạn, cho 313 đoạn. Tổng 449 đoạn đều giữ ID, văn bản nguồn và vị trí trang; đoạn OCR không được mặc nhiên xem là khoản đã nhận dạng chính xác.
+
+Kiểm tra hash và số trang hạn chế nhầm tệp/mất trang, chưa xác nhận từng chữ OCR. Số quyết định, dấu và bảng cần đối chiếu trang PDF.
+
+\subsection{Đồ thị có chứng cứ}
+Đồ thị là đa đồ thị có hướng, cho phép nhiều quan hệ giữa hai văn bản. Có 22 nút Document: 9 văn bản có toàn văn và 13 nút chỉ tham chiếu. Cùng với 449 nút đoạn, 7 chủ đề và 2 đối tượng, tổng số nút là 480. Có 1.872 cạnh, nhưng chỉ 22 cạnh thuộc tập quan hệ pháp lý được rà; không được hiểu mọi cạnh là một quan hệ sửa đổi hoặc thay thế.
+
+\begin{table}[H]
+\centering\small
+\caption{Các loại cạnh và vai trò trong truy xuất}
+\begin{tabularx}{\textwidth}{l X}
+\toprule Nhóm cạnh & Vai trò\\
+\midrule
+CONTAINS & Nối văn bản với các đoạn có chứng cứ.\\
+NEXT & Nối đoạn kế tiếp trong cùng văn bản để mở rộng ngữ cảnh.\\
+ABOUT, APPLIES\_TO & Liên kết chủ đề/đối tượng suy từ từ khóa, phục vụ tìm kiếm.\\
+AMENDS, SUPPLEMENTS & Biểu diễn phát biểu sửa đổi hoặc bổ sung giữa văn bản.\\
+REPLACES & Biểu diễn phát biểu thay thế được nêu trong tài liệu.\\
+CONSOLIDATES, CITES & Biểu diễn hợp nhất hoặc viện dẫn; viện dẫn không đồng nghĩa sửa đổi.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Mỗi quan hệ pháp lý có trang/câu dẫn khớp đúng OCR và đoạn chỉ mục, kèm ID và URL PDF. Nút tham chiếu chưa có toàn văn không được đưa vào prompt như chứng cứ.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.2cm, every node/.style={font=\small}, doc/.style={draw,rounded corners,align=center,text width=3.1cm,minimum height=1cm}, >=Latex]
+\node[doc] (a) {QĐ721/2024\\Có toàn văn};
+\node[doc, right=2.3cm of a,yshift=.75cm] (b) {QĐ254/2023\\Nút tham chiếu};
+\node[doc, right=2.3cm of a,yshift=-.75cm] (c) {QĐ1432/2023\\Nút tham chiếu};
+\node[draw,align=center,below=1.4cm of a,text width=4cm] (e) {Đoạn chứng cứ trang 1\\ID và URL nguồn};
+\draw[->] (a)--node[above,sloped]{REPLACES}(b);
+\draw[->] (a)--node[below,sloped]{REPLACES}(c);
+\draw[->] (a)--node[right]{CONTAINS}(e);
+\end{tikzpicture}
+\caption{Ví dụ quan hệ theo QĐ721, không suy diễn toàn văn của nút tham chiếu.}
+\end{figure}
+
+QĐ721 ghi thay thế hai quyết định trên \cite{qd721}; chưa xác nhận đây là bản mới nhất. Tập 22 quan hệ chưa bao phủ mọi quan hệ trong corpus. Tham chiếu chưa rà không tự chuyển thành cạnh pháp lý.

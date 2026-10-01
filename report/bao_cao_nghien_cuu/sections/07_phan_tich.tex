@@ -1,0 +1,44 @@
+\section{Phân tích nguyên nhân và độ tin cậy}
+\subsection{Trường hợp GraphRAG hỗ trợ tốt hơn}
+\textbf{V02 --- xác định văn bản bị thay thế.} Câu hỏi yêu cầu quyết định được quy chế hợp nhất thay thế. RAG không lấy được khoản 2 Điều 22 và từ chối. GraphRAG đưa vào đúng chứng cứ, trả QĐ787/2018 cùng ngày 09/08/2018. Điểm cải thiện nằm ở việc tìm phát biểu quan hệ trong phần hiệu lực/thi hành, vốn có thể kém tương đồng với câu hỏi so với đoạn nội dung đào tạo.
+
+\textbf{R01 --- hai văn bản bị QĐ721 thay thế.} GraphRAG nhận diện số hiệu và ý định thay thế, ưu tiên đoạn chứng cứ trang 1. Đáp án nêu QĐ254/2023 và QĐ1432/2023; RAG thiếu đoạn và từ chối. Hai đích là nút tham chiếu, nhưng câu trả lời vẫn có chứng cứ vì phát biểu thay thế nằm trong QĐ721. Hệ thống không cần giả định toàn văn của các nút đích để trả câu hỏi này. Lỗi dấu gạch OCR trong ký hiệu được ghi chú, không làm thay đổi số hiệu trong tiêu chí chấm.
+
+\textbf{R02 --- căn cứ nằm ở hai trang.} Quy định khóa luận dẫn TT08/2021 và QĐ239/2022. GraphRAG tìm đủ chứng cứ trang 1 và 2; RAG chỉ tìm được một phần và từ chối. Trường hợp này cho thấy cần đánh giá chuỗi chứng cứ, thay vì chỉ kiểm tra có nhắc đúng tên văn bản hay không. Một câu trả lời đầy đủ phải hỗ trợ cả hai ý, không dùng một citation để bao trùm phát biểu không nằm trong đoạn đó.
+
+\textbf{R03 và R06 --- quan hệ nối giữa văn bản.} R03 yêu cầu QĐ663 sửa QĐ787 \cite{qd663} và quan hệ của bản hợp nhất với QĐ663; R06 yêu cầu hai quyết định bị TT08 thay thế. GraphRAG trả đủ, RAG từ chối do thiếu chứng cứ. R03 cũng phát hiện lỗi kỹ thuật đọc citation nhóm. Tách lỗi validator khỏi lỗi nội dung giúp tránh chấm một đáp án có hai ID hợp lệ thành thất bại của mô hình; việc kiểm tra lại offline được ghi rõ trong hồ sơ.
+
+\subsection{Vì sao có lợi ích ở nhóm này?}
+Số hiệu/năm là tín hiệu từ vựng mạnh; quan hệ sửa đổi hoặc thay thế là thông tin có cấu trúc. GraphRAG kết hợp các tín hiệu này với cạnh đã có câu dẫn, đưa đoạn chứng cứ vào ứng viên và cộng điểm ưu tiên. Trace và đoạn trả về phù hợp với cơ chế này. Tuy vậy, đây là giải thích từ triển khai và quan sát, chưa phải kết luận nhân quả riêng cho đồ thị.
+
+Hybrid cải thiện đáng kể trên bộ 8 quan hệ, từ 0,25 lên 0,625. Phần chênh lệch còn lại với GraphRAG có thể liên quan đồng thời đến cạnh, mở rộng ứng viên và điểm thưởng. Để cô lập nguyên nhân cần các ablation giữ nguyên phần còn lại, chẳng hạn bỏ điểm thưởng hoặc bỏ cạnh trong cùng cơ chế ứng viên. Các ablation này là đề xuất, chưa được chạy và không có số liệu trong báo cáo.
+
+\subsection{Trường hợp RAG tốt hơn và lỗi chung}
+\textbf{S07 --- dẫn nguồn tồn tại nhưng sai phạm vi.} Câu hỏi đã nêu bản hợp nhất và hỏi khoảng điểm A/F. RAG lấy khoản 7 Điều 9, trả A từ 8,5 đến 10 và F dưới 4. GraphRAG đưa vào TT08 và trả A bằng 4, F bằng 0, tức giá trị quy đổi thay vì khoảng điểm. Citation không giả, nhưng phát biểu không đáp ứng phạm vi và trọng tâm câu hỏi. Đây là bằng chứng rằng kiểm tra ID hợp lệ không thay thế kiểm tra ý nghĩa.
+
+Nguyên nhân quan sát được gồm việc nhiều văn bản cùng chứa từ khóa điểm A/F và xếp hạng chưa bảo đảm chứng cứ thuộc văn bản được hỏi. Việc thêm số hiệu vào câu có thể nâng đoạn mở đầu hoặc đoạn quan hệ, cạnh tranh chỗ với nội dung điều khoản trong top 5. Cần kiểm tra trace và cơ chế giới hạn phạm vi, thay vì cài câu trả lời riêng cho S07. Một giải pháp có thể là dùng metadata để ưu tiên phạm vi rõ, nhưng phải đánh giá lại trên bộ độc lập trước khi kết luận hiệu quả.
+
+\textbf{M01 --- RAG trả một phần, GraphRAG từ chối.} RAG trả GPA tối thiểu 2,00 và thời hạn cấp bằng ba tháng sau khi đủ điều kiện/nghĩa vụ, đạt ý chính nhưng thiếu các điều kiện khác trong gold. GraphRAG không tìm đủ hai chứng cứ và từ chối. Chỉ tăng liên kết đồ thị không bảo đảm tìm đầy đủ các điều kiện trong cùng văn bản. Câu này đồng thời cho thấy điểm đúng và điểm đủ phải được tách.
+
+\textbf{M02 --- con số có nguồn nhưng chưa phải mức cuối cùng.} Cả hai lấy khoản 3 Điều 7 về 33 tín chỉ trong đợt đăng ký chính, bỏ lỡ khoản 5 về mức 27 của khối lượng học kỳ cùng nghĩa vụ điều chỉnh. Thông tin tuần rút 03--08 đúng nhưng thiếu ý học phí theo gold. Không nên gọi 33 là số bịa: nó có trong chứng cứ, song chưa trả đúng giới hạn mà câu hỏi và gold yêu cầu. Lỗi nằm ở phối hợp quy định và nhận diện giai đoạn áp dụng.
+
+\textbf{M05/M08 --- thiếu một phần chứng cứ dẫn tới từ chối sai.} M05 bỏ lỡ nội dung công nhận/chuyển đổi 50\%; M08 tìm được tỷ lệ trực tuyến 30\% nhưng thiếu đoạn ít nhất hai điểm thành phần. Cả hai từ chối trên câu có đáp án trong corpus. Với ngân sách top 5, đoạn gần nghĩa có thể chiếm chỗ các điều kiện cần thiết. Việc trả lời thận trọng giúp tránh suy diễn, nhưng không xóa lỗi truy xuất khiến hệ thống mất khả năng trả lời.
+
+\subsection{Thiếu ý dù đã có đoạn đúng}
+S02 trả đúng tuần rút nhưng bỏ điều kiện và học phí trong gold; S04 trả đúng 30\% nhưng bỏ ngoại lệ bất khả kháng theo hướng dẫn; V01 trả đúng sáu năm nhưng thiếu ngoại lệ. Những lỗi này xuất hiện sau khi đã tìm được đoạn liên quan, nên chỉ nâng Recall chưa đủ. Prompt hoặc bộ kiểm tra điều kiện có thể hỗ trợ, nhưng cần cân bằng độ dài và tránh ép mô hình thêm nội dung không được nguồn hỗ trợ. Ngược lại, S06 và V04 đều trả đủ ở cả hai phương pháp, minh họa trường hợp GraphRAG không tạo thêm lợi ích nội dung.
+
+\subsection{Các đe dọa đến độ tin cậy}
+\textbf{Tính đại diện của bộ câu.} Bộ 20 được chọn cân bằng để phân tích, không lấy từ phân bố truy vấn thực. Bộ 8 quan hệ được soạn sau đồ thị, có khả năng đo đúng những quan hệ đã được ưu tiên. Các câu trong ba bộ chồng lấp; tăng số lượt chạy không làm tăng tương ứng độ đa dạng mẫu. Kết quả được diễn giải trong phạm vi nội bộ, không suy rộng thành độ chính xác cho sinh viên HaUI nói chung.
+
+\textbf{Tính tin cậy của chấm điểm.} Trợ lý AI vừa hỗ trợ phát triển vừa chấm sơ bộ; chưa có chấm mù, hai người chấm hoặc độ đồng thuận. Gold có yêu cầu độ đầy đủ chưa thống nhất giữa S02 và V05. Dù hai phương pháp dùng cùng rubric theo từng câu, thiên lệch đánh giá vẫn có thể tồn tại. Người thực hiện cần đọc lại đáp án, trang PDF và ghi chú trước khi dùng bảng như kết quả chính thức cuối cùng.
+
+\textbf{Tính cô lập của biến.} GraphRAG khác vector thuần ở từ vựng, ứng viên, mở rộng và điểm thưởng. Hybrid chỉ kiểm soát một phần từ vựng. Trọng số 0,55/0,45, điểm thưởng 0,7 và top 5 chưa được lựa chọn trên tập phát triển tách biệt. Không thể quy mọi mức tăng cho đồ thị hoặc coi cấu hình hiện tại đã tối ưu.
+
+\textbf{Chất lượng dữ liệu và thời gian.} OCR chưa hiệu đính toàn bộ; các quan hệ được kiểm tra khớp câu dẫn trong trang/đoạn nhưng chưa phải rà pháp lý đầy đủ. Corpus chưa xác minh hiệu lực hiện hành và thiếu toàn văn 13 nút tham chiếu. Kết quả trả về phải được đọc theo văn bản đã có, không dùng cho kết luận quy chế mới nhất. Bộ nguồn cũng không đại diện mọi quy định của trường.
+
+\textbf{Tái lập và dịch vụ ngoài.} Revision embedding, cấu hình, hash và log được lưu, giúp dựng lại quá trình. Tuy nhiên, Gemini là dịch vụ ngoài có thể thay đổi; temperature bằng 0 không bảo đảm đáp án tuyệt đối giống qua mọi lần gọi. Dependency trực tiếp được pin nhưng chưa khóa đầy đủ dependency gián tiếp hoặc kiểm tra cài mới sạch. Độ trễ chỉ có một run, chịu mạng, lịch CPU và phía provider; không suy ra khả năng tải lớn.
+
+\subsection{Đợt đánh giá tiếp theo phù hợp quy mô đề tài}
+Ưu tiên tiếp theo là chất lượng thiết kế thay vì tăng số request lớn: đóng băng corpus, nhờ người độc lập soạn khoảng 30 câu phân tầng, duyệt gold trực tiếp trên PDF và tách tập phát triển khỏi tập đánh giá. Có thể chấm mù hai phương pháp theo rubric thống nhất, ghi bất đồng và cách phân xử. Các câu mới nên bao gồm điều kiện/ngoại lệ, số hiệu viết khác nhau, phạm vi văn bản rõ và yêu cầu ngoài corpus.
+
+Một đợt ablation nhỏ có thể giữ chung điểm hybrid và ngân sách rồi lần lượt bỏ mở rộng pháp lý hoặc bỏ điểm thưởng. Chỉ khi có số liệu mới mới kết luận đóng góp riêng của từng thành phần. Mở rộng data nên xuất phát từ khoảng thiếu chứng cứ hoặc mục tiêu mới, kèm hiệu đính OCR và cập nhật gold; không thêm văn bản chỉ để tăng số trang hoặc độ lớn corpus. Những bước này chưa được thực hiện trong nghiên cứu hiện tại.

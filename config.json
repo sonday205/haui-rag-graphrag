@@ -1,0 +1,13 @@
+{
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "gemini_model": "gemini-3.5-flash-lite",
+  "top_k": 5,
+  "max_evidence_chars": 6500,
+  "generation_temperature": 0,
+  "embedding_window_tokens": 256,
+  "embedding_stride_tokens": 64,
+  "generation_timeout_ms": 30000,
+  "generation_max_output_tokens": 2048,
+  "min_api_interval_seconds": 5.0
+}

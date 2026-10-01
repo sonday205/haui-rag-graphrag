@@ -1,0 +1,42 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 13660.44it/s]
+{"question_id": "S02", "method": "rag", "latency_ms": 4017.67, "token_usage": {"input": 1563, "output": 129, "thoughts": null, "total": 1692}, "error": null}
+{"question_id": "S02", "method": "graph_rag", "latency_ms": 1728.74, "token_usage": {"input": 1508, "output": 133, "thoughts": null, "total": 1641}, "error": null}
+{"question_id": "S04", "method": "graph_rag", "latency_ms": 1695.9, "token_usage": {"input": 1698, "output": 135, "thoughts": null, "total": 1833}, "error": null}
+{"question_id": "S04", "method": "rag", "latency_ms": 1559.39, "token_usage": {"input": 1343, "output": 135, "thoughts": null, "total": 1478}, "error": null}
+{"question_id": "S06", "method": "rag", "latency_ms": 1807.6, "token_usage": {"input": 1290, "output": 142, "thoughts": null, "total": 1432}, "error": null}
+{"question_id": "S06", "method": "graph_rag", "latency_ms": 1455.82, "token_usage": {"input": 1487, "output": 144, "thoughts": null, "total": 1631}, "error": null}
+{"question_id": "S07", "method": "graph_rag", "latency_ms": 1609.44, "token_usage": {"input": 1702, "output": 116, "thoughts": null, "total": 1818}, "error": null}
+{"question_id": "S07", "method": "rag", "latency_ms": 1865.78, "token_usage": {"input": 1881, "output": 144, "thoughts": null, "total": 2025}, "error": null}
+{"question_id": "M01", "method": "rag", "latency_ms": 1501.54, "token_usage": {"input": 1400, "output": 177, "thoughts": null, "total": 1577}, "error": null}
+{"question_id": "M01", "method": "graph_rag", "latency_ms": 1319.41, "token_usage": {"input": 1447, "output": 38, "thoughts": null, "total": 1485}, "error": null}
+{"question_id": "M02", "method": "graph_rag", "latency_ms": 1854.09, "token_usage": {"input": 1517, "output": 208, "thoughts": null, "total": 1725}, "error": null}
+{"question_id": "M02", "method": "rag", "latency_ms": 1756.41, "token_usage": {"input": 1463, "output": 195, "thoughts": null, "total": 1658}, "error": null}
+{"question_id": "M05", "method": "rag", "latency_ms": 1444.03, "token_usage": {"input": 1377, "output": 38, "thoughts": null, "total": 1415}, "error": null}
+{"question_id": "M05", "method": "graph_rag", "latency_ms": 1451.48, "token_usage": {"input": 1468, "output": 38, "thoughts": null, "total": 1506}, "error": null}
+{"question_id": "M08", "method": "graph_rag", "latency_ms": 1290.89, "token_usage": {"input": 1441, "output": 38, "thoughts": null, "total": 1479}, "error": null}
+{"question_id": "M08", "method": "rag", "latency_ms": 1203.33, "token_usage": {"input": 1402, "output": 38, "thoughts": null, "total": 1440}, "error": null}
+{"question_id": "V01", "method": "rag", "latency_ms": 1415.78, "token_usage": {"input": 1401, "output": 120, "thoughts": null, "total": 1521}, "error": null}
+{"question_id": "V01", "method": "graph_rag", "latency_ms": 1777.0, "token_usage": {"input": 1419, "output": 139, "thoughts": null, "total": 1558}, "error": null}
+{"question_id": "V02", "method": "graph_rag", "latency_ms": 1722.67, "token_usage": {"input": 1612, "output": 139, "thoughts": null, "total": 1751}, "error": null}
+{"question_id": "V02", "method": "rag", "latency_ms": 1517.13, "token_usage": {"input": 1532, "output": 38, "thoughts": null, "total": 1570}, "error": null}
+{"question_id": "V04", "method": "rag", "latency_ms": 1832.59, "token_usage": {"input": 1380, "output": 161, "thoughts": null, "total": 1541}, "error": null}
+{"question_id": "V04", "method": "graph_rag", "latency_ms": 3464.98, "token_usage": {"input": 1417, "output": 186, "thoughts": null, "total": 1603}, "error": null}
+{"question_id": "V05", "method": "graph_rag", "latency_ms": 1753.78, "token_usage": {"input": 1596, "output": 150, "thoughts": null, "total": 1746}, "error": null}
+{"question_id": "V05", "method": "rag", "latency_ms": 1561.59, "token_usage": {"input": 1553, "output": 114, "thoughts": null, "total": 1667}, "error": null}
+{"question_id": "R01", "method": "rag", "latency_ms": 1695.95, "token_usage": {"input": 1513, "output": 38, "thoughts": null, "total": 1551}, "error": null}
+{"question_id": "R01", "method": "graph_rag", "latency_ms": 1915.86, "token_usage": {"input": 1668, "output": 207, "thoughts": null, "total": 1875}, "error": null}
+{"question_id": "R02", "method": "graph_rag", "latency_ms": 1861.61, "token_usage": {"input": 1876, "output": 239, "thoughts": null, "total": 2115}, "error": null}
+{"question_id": "R02", "method": "rag", "latency_ms": 1471.57, "token_usage": {"input": 1853, "output": 38, "thoughts": null, "total": 1891}, "error": null}
+{"question_id": "R03", "method": "rag", "latency_ms": 1358.92, "token_usage": {"input": 1675, "output": 38, "thoughts": null, "total": 1713}, "error": null}
+{"question_id": "R03", "method": "graph_rag", "latency_ms": 2299.13, "token_usage": {"input": 1591, "output": 306, "thoughts": null, "total": 1897}, "error": "Lỗi Gemini: ValueError: Mô hình không trả đáp án/trích dẫn hợp lệ: Đáp án phải dẫn ID chứng cứ hợp lệ, khớp danh sách cited_ids"}
+{"question_id": "R06", "method": "graph_rag", "latency_ms": 1817.6, "token_usage": {"input": 1500, "output": 181, "thoughts": null, "total": 1681}, "error": null}
+{"question_id": "R06", "method": "rag", "latency_ms": 1255.57, "token_usage": {"input": 1212, "output": 38, "thoughts": null, "total": 1250}, "error": null}
+{"question_id": "U01", "method": "rag", "latency_ms": 1399.39, "token_usage": {"input": 1253, "output": 38, "thoughts": null, "total": 1291}, "error": null}
+{"question_id": "U01", "method": "graph_rag", "latency_ms": 1369.1, "token_usage": {"input": 1945, "output": 38, "thoughts": null, "total": 1983}, "error": null}
+{"question_id": "U02", "method": "graph_rag", "latency_ms": 1519.66, "token_usage": {"input": 1446, "output": 38, "thoughts": null, "total": 1484}, "error": null}
+{"question_id": "U02", "method": "rag", "latency_ms": 1217.05, "token_usage": {"input": 1608, "output": 38, "thoughts": null, "total": 1646}, "error": null}
+{"question_id": "U03", "method": "rag", "latency_ms": 1392.62, "token_usage": {"input": 1324, "output": 38, "thoughts": null, "total": 1362}, "error": null}
+{"question_id": "U03", "method": "graph_rag", "latency_ms": 1502.1, "token_usage": {"input": 1669, "output": 38, "thoughts": null, "total": 1707}, "error": null}
+{"question_id": "U05", "method": "graph_rag", "latency_ms": 1541.63, "token_usage": {"input": 1716, "output": 38, "thoughts": null, "total": 1754}, "error": null}
+{"question_id": "U05", "method": "rag", "latency_ms": 1452.52, "token_usage": {"input": 1461, "output": 38, "thoughts": null, "total": 1499}, "error": null}
+Hoàn tất 40 lượt trong /home/sonnh/Documents/HaUI/evaluation/runs/gemini_research_20261001_35lite.jsonl

@@ -1,0 +1,13 @@
+{
+  "health": {
+    "ready": true,
+    "key_configured": true,
+    "model": "gemini-3.8-flash",
+    "corpus_documents": 9,
+    "corpus_chunks": 449,
+    "ocr_documents": 8,
+    "validity": "unknown"
+  },
+  "chat_status": 500,
+  "chat_body": "Internal Server Error"
+}

@@ -1,0 +1,24 @@
+/home/sonnh/anaconda3/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 11192.16it/s]
+test_api_modes_validation_and_missing_key (test_research_fixes.ResearchFixTests.test_api_modes_validation_and_missing_key) ... ok
+test_checkpoint_model_switch_rejected (test_research_fixes.ResearchFixTests.test_checkpoint_model_switch_rejected) ... Đã dừng theo --max-new-calls=0.
+ok
+test_compare_skips_second_call_on_provider_error (test_research_fixes.ResearchFixTests.test_compare_skips_second_call_on_provider_error) ... ok
+test_document_aliases_are_metadata_based (test_research_fixes.ResearchFixTests.test_document_aliases_are_metadata_based) ... ok
+test_empty_json_and_invalid_schema (test_research_fixes.ResearchFixTests.test_empty_json_and_invalid_schema) ... ok
+test_failed_embedding_preserves_all_artifacts (test_research_fixes.ResearchFixTests.test_failed_embedding_preserves_all_artifacts) ... ok
+test_failed_ocr_preserves_all_artifacts (test_research_fixes.ResearchFixTests.test_failed_ocr_preserves_all_artifacts) ... ok
+test_grouped_citations_validate_every_id (test_research_fixes.ResearchFixTests.test_grouped_citations_validate_every_id) ... ok
+test_hash_tampering_and_embedding_config_are_rejected (test_research_fixes.ResearchFixTests.test_hash_tampering_and_embedding_config_are_rejected) ... ok
+test_health_missing_vector_returns_unready_and_503 (test_research_fixes.ResearchFixTests.test_health_missing_vector_returns_unready_and_503) ... ok
+test_invalid_publication_keeps_current (test_research_fixes.ResearchFixTests.test_invalid_publication_keeps_current) ... ok
+test_long_embedding_keeps_tail (test_research_fixes.ResearchFixTests.test_long_embedding_keeps_tail) ... ok
+test_mixed_refusal_is_blocked (test_research_fixes.ResearchFixTests.test_mixed_refusal_is_blocked) ... ok
+test_plain_refusal_and_supported_answer (test_research_fixes.ResearchFixTests.test_plain_refusal_and_supported_answer) ... ok
+test_unknown_missing_and_mismatched_ids (test_research_fixes.ResearchFixTests.test_unknown_missing_and_mismatched_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 6.537s
+
+OK

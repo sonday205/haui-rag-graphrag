@@ -1,0 +1,22 @@
+.env
+__pycache__/
+*.pyc
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+.venv/
+.local-tools/
+.codegraph/
+.pytest_cache/
+.env.*
+!.env.example
+
+# Trạng thái điều phối local, không phải dữ liệu nghiên cứu
+evaluation/runs/gemini_pacing.json
+evaluation/runs/gemini_pacing.lock
+evaluation/runs/*.lock
+
+# File sinh khi biên dịch và mẫu tham khảo không thuộc báo cáo dự án
+report/bao_cao_nghien_cuu/build/
+report/latex.tex
+report/cv.pdf

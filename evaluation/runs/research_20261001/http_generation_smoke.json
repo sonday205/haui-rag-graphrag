@@ -1,0 +1,352 @@
+{
+  "purpose": "Post-fix HTTP smoke, excluded from 20-pair scientific dataset",
+  "response": {
+    "question": "Văn bản 663/2019 sửa đổi quyết định đào tạo nào, và bản hợp nhất 744/666 xử lý văn bản 663 ra sao?",
+    "mode": "graph_rag",
+    "retrieve_only": false,
+    "results": {
+      "graph_rag": {
+        "question": "Văn bản 663/2019 sửa đổi quyết định đào tạo nào, và bản hợp nhất 744/666 xử lý văn bản 663 ra sao?",
+        "method": "graph_rag",
+        "answer": "Văn bản số 663/QĐ-ĐHCN ngày 12 tháng 7 năm 2019 sửa đổi, bổ sung một số nội dung Quy chế đào tạo đại học và cao đẳng hệ chính quy theo học chế tín chỉ ban hành tại Quyết định số 787/QĐ-ĐHCN ngày 9 tháng 8 năm 2018 của Trường Đại học Công nghiệp Hà Nội [QC2023-D22-K2-P01], cụ thể là sửa đổi, bổ sung một số điều của quy chế này (như sửa đổi Mục a trong Khoản 3 của Điều 8) [QD663_2019-P001-C02]. Bản hợp nhất (744/QĐ-ĐHCN và 666/QĐ-ĐHCN) liệt kê văn bản 663/QĐ-ĐHCN vào danh mục các quyết định bị thay thế bởi Quy chế đào tạo ban hành kèm theo văn bản hợp nhất này [QC2023-D22-K2-P01].",
+        "citations": [
+          {
+            "article_id": "QC2023-D22-K2-P01",
+            "label": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023), Điều 22, khoản 2, trang 28",
+            "url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+          },
+          {
+            "article_id": "QD663_2019-P001-C02",
+            "label": "Sửa đổi quy chế đào tạo tín chỉ QĐ 787/2018, trang 1 (OCR chưa hiệu đính toàn bộ)",
+            "url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2712.pdf#page=1"
+          }
+        ],
+        "retrieved_article_ids": [
+          "QC2023-P001-PREFACE",
+          "QC2023-D22-K2-P01",
+          "QD663_2019-P001-C02",
+          "TT08_2021-P001-C02",
+          "QC2023-D16-K4-P01"
+        ],
+        "evidence": [
+          {
+            "id": "QC2023-P001-PREFACE",
+            "document_id": "QC2023",
+            "article_id": null,
+            "article_number": null,
+            "clause": null,
+            "title": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023)",
+            "document_number": "744/QĐ-ĐHCN; 666/QĐ-ĐHCN",
+            "issued_date": "2021-08-19; 2023-06-01",
+            "text": "QUY CHẾ ĐÀO TẠO TRÌNH ĐỘ ĐẠI HỌC\n        TẠI TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI\n  (Hợp nhất quy chế đào tạo ban hành theo quyết định 744/QĐ-ĐHCN ngày 19 tháng 08\n năm 2021 và quyết định sửa đổi một số điều của quy chế 744 ban hành theo Quyết định\n                666/QĐ-ĐHCN ngày 01 tháng 06 năm 2023)",
+            "page_start": 1,
+            "page_end": 1,
+            "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf",
+            "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+            "source_sha256": "40537d705441f559f82047b4b06744105d02106193b226e377984affece8dcc7",
+            "source_char_start": 0,
+            "validity": "unknown"
+          },
+          {
+            "id": "QC2023-D22-K2-P01",
+            "document_id": "QC2023",
+            "article_id": "D22",
+            "article_number": 22,
+            "clause": "2",
+            "title": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023)",
+            "document_number": "744/QĐ-ĐHCN; 666/QĐ-ĐHCN",
+            "issued_date": "2021-08-19; 2023-06-01",
+            "text": "2. Quy chế này thay thế Quy chế Đào tạo đại học hệ vừa làm vừa học theo\nhọc chế tín chỉ tại Trường Đại học Công nghiệp Hà Nội ban hành kèm theo Quyết\nđịnh số 1017/QĐ-ĐHCN ngày 5 tháng 9 năm 2016 của Trường Đại học Công\nnghiệp Hà Nội; Quy định liên kết đào tạo trình độ đại học của Trường Đại học\nCông nghiệp Hà Nội ban hành kèm theo Quyết định số 479/QĐ-ĐHCN ngày 8\ntháng 5 năm 2018 của Trường Đại học Công nghiệp Hà Nội; Quy chế Đào tạo đại\nhọc và cao đẳng hệ chính quy theo học chế tín chỉ tại Trường Đại học Công nghiệp\nHà Nội ban hành kèm theo Quyết định số 787/QĐ-ĐHCN ngày 9 tháng 8 năm\n2018 của Trường Đại học Công nghiệp Hà Nội; Sửa đổi, bổ sung một số nội dung\nQuy chế đào tạo đại học và cao đẳng hệ chính quy theo học chế tín chỉ ban hành\ntại Quyết định số 787/QĐ-ĐHCN ngày 9 tháng 8 năm 2018 của Trường Đại học\nCông nghiệp Hà Nội ban hành kèm theo Quyết định số 663/QĐ-ĐHCN ngày 12\ntháng 7 năm 2019 của Trường Đại học Công nghiệp Hà Nội./.",
+            "page_start": 28,
+            "page_end": 28,
+            "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf",
+            "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+            "source_sha256": "40537d705441f559f82047b4b06744105d02106193b226e377984affece8dcc7",
+            "source_char_start": 62698,
+            "validity": "unknown"
+          },
+          {
+            "id": "QD663_2019-P001-C02",
+            "document_id": "QD663_2019",
+            "article_id": null,
+            "article_number": null,
+            "clause": null,
+            "title": "Sửa đổi quy chế đào tạo tín chỉ QĐ 787/2018",
+            "document_number": "663/QĐ-ĐHCN",
+            "issued_date": "2019-07-12",
+            "text": "thực tế và yêu cầu nâng cao chất lượng hoạt động đào †ạo của Nhà trường: Xét đề nghị của ông Trưởng phòng Đào tạo, QUYÉT ĐỊNH Điều 1. Sửa đổi, bổ sung một số điều của Quy chế đào tạo đại học và cao đẳng hệ chính quy theo học chế tín chỉ ban hành kèm theo Quyết định số 787/QD-DHCN ngày 09/08/2018 của Hiệu trưởng Trường Đại học Công nghiệp Hà Nội, như sau: 1. Sửa đôi Mục a trong Khoản 3 của Điều 8 như sau: “3, Chuyển ngành đảo tạo theo nguyện vọng của sinh viên a) Sau khi kết thúc 2 học kỳ chính đầu tiên của khóa học, sinh viên có thể chuyên ngành đảo tạo nếu thỏa mãn các điều kiện sau: - Thỏa mãn điều kiện trúng tuyển của ngành xin chuyền đến. - Được chuyên đuy nhất 1 lần trong khóa học. =.A ý Sư“¬ 4",
+            "page_start": 1,
+            "page_end": 1,
+            "source_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2712.pdf",
+            "landing_url": "https://dttc.haui.edu.vn/vn/quy-che-dao-tao/quyet-dinh-sua-doi-bo-sung-mot-so-noi-dung-cua-quy-che-dao-tao-dai-hoc-cao-dang-theo-hoc-che-tin-chi-ban-hanh-tai-quyet-dinh-so-787-qd-dhcn-ngay-09-08-2018-cua-hieu-truong-truong-dhcn-hn/49838",
+            "source_sha256": "e0a1f4bad8969d4fa4c7525fdade9e7bc3175283972d953c1de3f72aac6135ec",
+            "ocr_sha256": "1006121f57d152851f2f5b1bea78ba23d960e642be084baaeba26f6f2cf9da3c",
+            "extraction_method": "user_supplied_ocr",
+            "ocr_review_status": "page_matched_unreviewed",
+            "validity": "unknown"
+          },
+          {
+            "id": "TT08_2021-P001-C02",
+            "document_id": "TT08_2021",
+            "article_id": null,
+            "article_number": null,
+            "clause": null,
+            "title": "Thông tư 08/2021/TT-BGDĐT đăng trên HaUI",
+            "document_number": "08/2021/TT-BGDĐT",
+            "issued_date": "2021-03-18",
+            "text": "hành một số điều của Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học; Theo đề nghị của Vụ trưởng Vụ Giáo đục Đại học; Bộ trưởng Bộ Giáo dục và Đào tạo ban hành Thông tư ban hành Quy chế đào tạo trình độ đại học. Điều 1. Ban hành kèm theo Thông tư này Quy chế đảo tạo trình độ đại học. Điều 2. Thông tư này có hiệu lực thi hành từ ngàyđŸ tháng Z năm 2021, áp dụng đối với các khóa tuyển sinh sau ngày thông tư có hiệu lực thi hành và thay thế Quyết định số 25/2006/QĐ-BGDĐT ngày 26 tháng 6 năm 2006 của Bộ trưởng Bộ Giáo dục và Đào tạo ban hành quy chế đào tạo đại học và cao đẳng hệ chính quy; Quyết định số 43/2007/QĐ-BGDĐT ngày 15 tháng 8 năm 2007 của Bộ trưởng Bộ Giáo dục và Đào tạo ban hành quy chế đào tạo đại học và cao đẳng hệ chính quy theo hệ thống tín chỉ; Thông tư số 57/2012/TT-BGDĐT ngày 27 tháng 12 năm 2012 sửa đổi, bổ sung một số điều của quy chế đào tạo đại học và cao đẳng hệ chính quy ban hành kèm theo Quyết định số 43/2007/QĐ- BGDĐT ngày 1Š tháng § năm 2007 của Bộ",
+            "page_start": 1,
+            "page_end": 1,
+            "source_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf",
+            "landing_url": "https://www.haui.edu.vn/vn/vbpl/detail/102",
+            "source_sha256": "86666e5aad39da111a6de960f4f71ecbd1a42383397db60fca268363c90133ad",
+            "ocr_sha256": "f6b0d24990e8d762f55ef816bc27542f719d62b1ac5b4c6f5fd4700c2e180838",
+            "extraction_method": "user_supplied_ocr",
+            "ocr_review_status": "page_matched_unreviewed",
+            "validity": "unknown"
+          },
+          {
+            "id": "QC2023-D16-K4-P01",
+            "document_id": "QC2023",
+            "article_id": "D16",
+            "article_number": 16,
+            "clause": "4",
+            "title": "Quy chế đào tạo trình độ đại học tại HaUI (hợp nhất QĐ 744/2021 và 666/2023)",
+            "document_number": "744/QĐ-ĐHCN; 666/QĐ-ĐHCN",
+            "issued_date": "2021-08-19; 2023-06-01",
+            "text": "4. Điều kiện trao đổi sinh viên, công nhận kết quả học tập và chuyển đổi tín\nchỉ cho sinh viên được quy định cụ thể trong văn bản hợp tác đào tạo Nhà trường\nký kết với cơ sở phối hợp đào tạo theo khoản 1 Điều này.11",
+            "page_start": 24,
+            "page_end": 24,
+            "source_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf",
+            "landing_url": "https://sict.haui.edu.vn/vn/html/quy-che",
+            "source_sha256": "40537d705441f559f82047b4b06744105d02106193b226e377984affece8dcc7",
+            "source_char_start": 54455,
+            "validity": "unknown"
+          }
+        ],
+        "retrieval_trace": {
+          "method": "graph_legal_hybrid",
+          "top_k": 5,
+          "seed_ids": [
+            "QC2023-P001-PREFACE",
+            "QC2023-D16-K4-P01",
+            "QC2023-D01-K3-P01",
+            "TT08_2021-P001-C02"
+          ],
+          "matched_topics": [],
+          "matched_documents": [
+            "Document:QC2023",
+            "Document:QD663_2019"
+          ],
+          "relation_evidence_ids": [
+            "QC2023-D22-K2-P01",
+            "QC2023-P001-PREFACE",
+            "QD663_2019-P001-C02"
+          ],
+          "related_documents": [
+            "DA2019",
+            "HP_SICT",
+            "KL_SICT",
+            "QD663_2019",
+            "QD721_2024"
+          ],
+          "traversed_edges": [
+            {
+              "from": "Document:QC2023",
+              "to": "Document:QD744_2021",
+              "relation": "CONSOLIDATES",
+              "evidence_article_ids": [
+                "QC2023-P001-PREFACE"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+            },
+            {
+              "from": "Document:QC2023",
+              "to": "Document:QD666_2023",
+              "relation": "CONSOLIDATES",
+              "evidence_article_ids": [
+                "QC2023-P001-PREFACE"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+            },
+            {
+              "from": "Document:QC2023",
+              "to": "Document:QD1017_2016",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "QC2023-D22-K2-P01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+            },
+            {
+              "from": "Document:QC2023",
+              "to": "Document:QD479_2018",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "QC2023-D22-K2-P01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+            },
+            {
+              "from": "Document:QC2023",
+              "to": "Document:QD787_2018",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "QC2023-D22-K2-P01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+            },
+            {
+              "from": "Document:QC2023",
+              "to": "Document:QD663_2019",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "QC2023-D22-K2-P01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=28"
+            },
+            {
+              "from": "Document:KL_SICT",
+              "to": "Document:QD666_2023",
+              "relation": "CITES",
+              "evidence_article_ids": [
+                "KL_SICT-P001-C01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1"
+            },
+            {
+              "from": "Document:QD666_2023",
+              "to": "Document:QD744_2021",
+              "relation": "AMENDS",
+              "evidence_article_ids": [
+                "QC2023-P001-PREFACE"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29811.pdf#page=1"
+            },
+            {
+              "from": "Document:QD663_2019",
+              "to": "Document:QD787_2018",
+              "relation": "AMENDS",
+              "evidence_article_ids": [
+                "QD663_2019-P001-C02"
+              ],
+              "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2712.pdf#page=1"
+            },
+            {
+              "from": "Document:DA2019",
+              "to": "Document:QD787_2018",
+              "relation": "CITES",
+              "evidence_article_ids": [
+                "DA2019-P001-C01"
+              ],
+              "evidence_url": "https://dttc.haui.edu.vn/media/2/uftai-ve-tai-day2656.pdf#page=1"
+            },
+            {
+              "from": "Document:KL_SICT",
+              "to": "Document:QD744_2021",
+              "relation": "CITES",
+              "evidence_article_ids": [
+                "KL_SICT-P001-C01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1"
+            },
+            {
+              "from": "Document:HP_SICT",
+              "to": "Document:QD744_2021",
+              "relation": "CITES",
+              "evidence_article_ids": [
+                "HP_SICT-P001-C01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29709.pdf#page=1"
+            },
+            {
+              "from": "Document:QD721_2024",
+              "to": "Document:QD744_2021",
+              "relation": "CITES",
+              "evidence_article_ids": [
+                "QD721_2024-P001-C01"
+              ],
+              "evidence_url": "https://cps.haui.edu.vn/media/quyet-dinh-721-ngay-03-06-2024-ve-viec-ban-hanh-quy-dinh-to-chuc-dgkqht-cua-nguoi-hoc-truong-dhcn-hn%20%285%29.pdf#page=1"
+            },
+            {
+              "from": "Document:KL_SICT",
+              "to": "Document:TT08_2021",
+              "relation": "CITES",
+              "evidence_article_ids": [
+                "KL_SICT-P001-C01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=1"
+            },
+            {
+              "from": "Document:TT08_2021",
+              "to": "Document:QD25_2006",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "TT08_2021-P001-C02"
+              ],
+              "evidence_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf#page=1"
+            },
+            {
+              "from": "Document:TT08_2021",
+              "to": "Document:QD43_2007",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "TT08_2021-P001-C02"
+              ],
+              "evidence_url": "https://www.haui.edu.vn/media/2/ufi2516.pdf#page=1"
+            },
+            {
+              "from": "Document:KL_SICT",
+              "to": "Document:QD239_2022",
+              "relation": "REPLACES",
+              "evidence_article_ids": [
+                "KL_SICT-P002-C01"
+              ],
+              "evidence_url": "https://sict.haui.edu.vn/media/29/uffile-upload-no-title29868.pdf#page=2"
+            }
+          ],
+          "candidate_count": 27,
+          "candidates": [
+            {
+              "id": "QC2023-P001-PREFACE",
+              "score": 1.1598
+            },
+            {
+              "id": "QC2023-D22-K2-P01",
+              "score": 0.9995
+            },
+            {
+              "id": "QD663_2019-P001-C02",
+              "score": 0.9833
+            },
+            {
+              "id": "TT08_2021-P001-C02",
+              "score": 0.3553
+            },
+            {
+              "id": "QC2023-D16-K4-P01",
+              "score": 0.3482
+            }
+          ]
+        },
+        "latency_ms": 3479.51,
+        "api_calls": 1,
+        "token_usage": {
+          "input": 1591,
+          "output": 316,
+          "thoughts": null,
+          "total": 1907
+        },
+        "error": null,
+        "answer_status": "answered",
+        "raw_answer": "{\n  \"status\": \"answered\",\n  \"answer\": \"Văn bản số 663/QĐ-ĐHCN ngày 12 tháng 7 năm 2019 sửa đổi, bổ sung một số nội dung Quy chế đào tạo đại học và cao đẳng hệ chính quy theo học chế tín chỉ ban hành tại Quyết định số 787/QĐ-ĐHCN ngày 9 tháng 8 năm 2018 của Trường Đại học Công nghiệp Hà Nội [QC2023-D22-K2-P01], cụ thể là sửa đổi, bổ sung một số điều của quy chế này (như sửa đổi Mục a trong Khoản 3 của Điều 8) [QD663_2019-P001-C02]. Bản hợp nhất (744/QĐ-ĐHCN và 666/QĐ-ĐHCN) liệt kê văn bản 663/QĐ-ĐHCN vào danh mục các quyết định bị thay thế bởi Quy chế đào tạo ban hành kèm theo văn bản hợp nhất này [QC2023-D22-K2-P01].\",\n  \"cited_ids\": [\n    \"QC2023-D22-K2-P01\",\n    \"QD663_2019-P001-C02\"\n  ]\n}",
+        "retrieval_ms": 62.43,
+        "pacing_wait_ms": 0.41,
+        "request_started_utc": "2026-10-01T08:28:51.444370+00:00",
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "wall_ms": 3479.92
+      }
+    }
+  }
+}

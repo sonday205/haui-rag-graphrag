@@ -1,0 +1,30 @@
+{
+  "S01": {
+    "rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Đủ giới hạn 10–27 tín chỉ và các ngoại lệ; đúng Điều 7 khoản 5."},
+    "graph_rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Đủ 10–27 tín chỉ, ngoại lệ và giải thích thêm mốc 33 tín chỉ trong đợt đăng ký chính; các ID đều có trong chứng cứ."}
+  },
+  "S02": {
+    "rag": {"correct": 1, "complete": 0, "citation": 1, "note": "Đúng tuần 03–08 nhưng bỏ điều kiện vẫn phải đóng học phí trong đáp án chuẩn."},
+    "graph_rag": {"correct": 1, "complete": 0, "citation": 1, "note": "Đúng tuần 03–08 nhưng bỏ điều kiện vẫn phải đóng học phí trong đáp án chuẩn."}
+  },
+  "S03": {
+    "rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Nêu đúng cả hai mốc 03–04 và 01–02 tuần; dẫn đúng Điều 7 khoản 3."},
+    "graph_rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Nêu đúng cả hai đợt và phạm vi người đăng ký; dẫn đúng Điều 7 khoản 3."}
+  },
+  "S04": {
+    "rag": {"correct": 1, "complete": 0, "citation": 1, "note": "Đúng ngưỡng 30% nhưng chưa nêu ngoại lệ thiên tai, dịch bệnh, bất khả kháng theo hướng dẫn Bộ."},
+    "graph_rag": {"correct": 1, "complete": 0, "citation": 1, "note": "Đúng ngưỡng 30% nhưng chưa nêu ngoại lệ thiên tai, dịch bệnh, bất khả kháng theo hướng dẫn Bộ."}
+  },
+  "S05": {
+    "rag": {"correct": 0, "complete": 0, "citation": 0, "note": "Từ chối sai trên câu có đáp án; top 5 không chứa đoạn chuẩn Điều 9 khoản 1 phần 1."},
+    "graph_rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Đủ quy tắc hai điểm thành phần và ngoại lệ học phần dưới 02 tín chỉ; dẫn đúng đoạn."}
+  },
+  "S06": {
+    "rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Đủ hạn 10 ngày, đơn, minh chứng và xác nhận Trưởng khoa."},
+    "graph_rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Đủ hạn 10 ngày, hồ sơ minh chứng, xác nhận Trưởng khoa và kỳ thi bổ sung."}
+  },
+  "S07": {
+    "rag": {"correct": 1, "complete": 1, "citation": 1, "note": "Đúng cả khoảng A 8,5–10,0 và F dưới 4,0; dẫn đúng Điều 9 khoản 7."},
+    "graph_rag": {"correct": 0, "complete": 0, "citation": 0, "note": "Từ chối sai trên câu có đáp án; top 5 thiếu đoạn chuẩn Điều 9 khoản 7 phần 1."}
+  }
+}
